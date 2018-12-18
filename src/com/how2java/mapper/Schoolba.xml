@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.how2java.mapper.SchoolbaMapper">
+	    
+		<select id="get"    resultType="Schoolba">
+			SELECT *  FROM schoolba0 Where id = #{id}
+		</select>
+
+		<select id="list"    resultType="Talk">
+			SELECT *FROM talk_
+		</select>		
+	</mapper>
