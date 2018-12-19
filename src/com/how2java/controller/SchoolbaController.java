@@ -7,10 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.how2java.pojo.Schoolba;
 import com.how2java.pojo.Talk;
 import com.how2java.service.SchoolbaService;
 import com.how2java.service.TalkService;
+import com.how2java.util.Page;
+
 
 @Controller
 @RequestMapping("")
@@ -21,13 +25,16 @@ public class SchoolbaController {
 	@Autowired
 	TalkService talkService;
 	@RequestMapping("getSchoolba")
-	public ModelAndView getSchoolba() {
+	public ModelAndView getSchoolba(Page page) {
 		ModelAndView mav = new ModelAndView();
 
 		Schoolba sb = schoolbaService.get(1);
-
+		
+		PageHelper.offsetPage(page.getStart(), 5);
 		List<Talk> tl = talkService.list();
+		int total = (int) new PageInfo<>(tl).getTotal();
 		mav.addObject("tl", tl);
+		page.caculateLast(total);
 		
 		mav.addObject("schoolbaname", sb.getName());
 		mav.addObject("schoolbaconcern", sb.getConcern());
