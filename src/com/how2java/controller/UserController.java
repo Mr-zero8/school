@@ -26,7 +26,7 @@ public class UserController {
 
 	@RequestMapping("login")
 	public String login(String name,String password,Model model){
-		
+		System.out.println("合作模式");
 		System.out.println("用户登录："+name+password);
 		
 		/*Map<String, String> map=new LinkedHashMap<String,String>();
