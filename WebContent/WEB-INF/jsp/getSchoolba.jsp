@@ -192,7 +192,7 @@
 		
 		<div class="col-md-12 column" style="margin-top: 10px;background-color:#F4F6F9;">
 			<p style="margin-top: 18px;"> <span class="glyphicon glyphicon-pencil"></span>  发表你的看法吧</p> 
-			<div class="col-md-8 column"style="margin-bottom:25px;margin-top: 13px;">
+			<div class="col-md-8 column"style="margin-bottom:25px;margin-top: 15px;">
 			<input type="text" class="form-control" placeholder="此处填写标题" style="height:40px; font-size:22px;">
 			</div>
 			<div class="col-md-8 column"style="margin-bottom:15px;">

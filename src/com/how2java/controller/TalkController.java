@@ -27,21 +27,21 @@ public class TalkController {
 		return mav;
 	}
 
-	@RequestMapping("getTalk")
-	public ModelAndView getTalk(Integer id) {
-		ModelAndView mav = new ModelAndView();
-		Talk tk = talkService.get(1);
-		System.out.println(tk.getAuthor());
-		mav.addObject("tk", tk);
-		
-		
-
-		mav.addObject("title", tk.getTitle());
-		mav.addObject("talkcount", tk.getTalkcount());
-		mav.addObject("author", tk.getAuthor());
-		mav.addObject("starttime", tk.getStarttime());
-		mav.addObject("updatetime", tk.getUpdatetime());
-		mav.setViewName("getSchoolba");
-		return mav;
-	}
+//	@RequestMapping("getTalk")
+//	public ModelAndView getTalk(Integer id) {
+//		ModelAndView mav = new ModelAndView();
+//		Talk tk = talkService.get(1);
+//		System.out.println(tk.getAuthor());
+//		mav.addObject("tk", tk);
+//		
+//		
+//
+//		mav.addObject("title", tk.getTitle());
+//		mav.addObject("talkcount", tk.getTalkcount());
+//		mav.addObject("author", tk.getAuthor());
+//		mav.addObject("starttime", tk.getStarttime());
+//		mav.addObject("updatetime", tk.getUpdatetime());
+//		mav.setViewName("getSchoolba");
+//		return mav;
+//	}
 }

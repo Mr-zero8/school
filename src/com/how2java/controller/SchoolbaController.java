@@ -9,12 +9,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.how2java.pojo.Category;
 import com.how2java.pojo.Schoolba;
 import com.how2java.pojo.Talk;
 import com.how2java.service.SchoolbaService;
 import com.how2java.service.TalkService;
 import com.how2java.util.Page;
-
 
 @Controller
 @RequestMapping("")
@@ -24,18 +24,19 @@ public class SchoolbaController {
 
 	@Autowired
 	TalkService talkService;
+
 	@RequestMapping("getSchoolba")
 	public ModelAndView getSchoolba(Page page) {
 		ModelAndView mav = new ModelAndView();
 
 		Schoolba sb = schoolbaService.get(1);
-		
+
 		PageHelper.offsetPage(page.getStart(), 5);
 		List<Talk> tl = talkService.list();
 		int total = (int) new PageInfo<>(tl).getTotal();
 		mav.addObject("tl", tl);
 		page.caculateLast(total);
-		
+
 		mav.addObject("schoolbaname", sb.getName());
 		mav.addObject("schoolbaconcern", sb.getConcern());
 		mav.addObject("schoolbatalkcount", sb.getTalkcount());
@@ -45,15 +46,47 @@ public class SchoolbaController {
 		return mav;
 	}
 
-//	@RequestMapping("listTalk")
-//	public ModelAndView listTalk() {
-//		ModelAndView mav = new ModelAndView();
-//		List<Talk> tl = schoolbaService.list();
-//
-//		mav.addObject("tl", tl);
-//
-//		mav.setViewName("getSchoolba");
-//		return mav;
-//	}
+	@RequestMapping("listSchoolba")
+	public ModelAndView listSchoolba() {
+		ModelAndView mav = new ModelAndView();
+
+		List<Schoolba> sl = schoolbaService.listschool();
+		// PageHelper.offsetPage(page.getStart(), 5);
+
+		// int total = (int) new PageInfo<>(tl).getTotal();
+		mav.addObject("sl", sl);
+		// page.caculateLast(total);
+
+		mav.setViewName("listSchoolba");
+		return mav;
+	}
+
+	@RequestMapping("searchlist")
+	public ModelAndView searchlistCategory(String string) {
+
+		ModelAndView mav = new ModelAndView();
+		// PageHelper.offsetPage(page.getStart(), 5);
+		List<Schoolba> ss = schoolbaService.searchlist(string);
+		// int total = (int) new PageInfo<>(ss).getTotal();
+		//
+		// page.caculateLast(total);
+
+		// 放入转发参数
+		mav.addObject("ss", ss);
+		// 放入jsp路径
+		mav.setViewName("searchlist");
+		return mav;
+	}
+
+	// @RequestMapping("listTalk")
+	// public ModelAndView listTalk() {
+	// ModelAndView mav = new ModelAndView();
+	// List<Talk> tl = schoolbaService.list();
+	//
+	// mav.addObject("tl", tl);
+	//
+	// mav.setViewName("getSchoolba");
+	// return mav;
+	// }
 
 }

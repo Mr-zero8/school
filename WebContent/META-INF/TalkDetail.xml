@@ -3,10 +3,10 @@
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-	<mapper namespace="com.how2java.mapper.TalkMapper">
+	<mapper namespace="com.how2java.mapper.TalkDetailMapper">
 	    
-		<select id="list"    resultType="Talk">
-			SELECT *FROM talk_
+		<select id="listtalkdetail"    resultType="TalkDetail">
+			SELECT *FROM talkdetail_
 		</select>
-		
+
 	</mapper>

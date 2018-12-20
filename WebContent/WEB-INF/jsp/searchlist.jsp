@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -65,12 +66,16 @@
 							</ul>
 						</li>
 					</ul>
-					<form class="navbar-form navbar-right" role="search">
+<!-- 					<form class="navbar-form navbar-right" role="search"> -->
+						<form method="post"  class="navbar-form navbar-right"  action="searchlist">
 						<div class="form-group">
-							<input type="text" class="form-control" />
-						</div> <button type="submit" class="btn btn-default">搜索</button>
-						<button type="submit" class="btn btn-default">自动匹配</button>
-					</form>
+							<input type="text"  name="string" class="form-control" />
+						</div> 
+						
+						<button type="submit" class="btn btn-default">搜索</button>
+						<button type="submit"  class="btn btn-default">自动匹配</button>
+						</form>
+<!-- 					</form> -->
 					<ul class="nav navbar-nav navbar-left">
 						<li>
 							 <a href="#">成绩录入</a>
@@ -152,6 +157,24 @@
 			</div>
 		</div>
 	</div>
+
+ <div class="row clearfix" >
+ 	<c:forEach items="${ss}" var="s" varStatus="st">
+	<div class="col-md-12 column" style="margin-bottom:25px;margin-top: 15px;">
+			
+				<div class="col-md-2 column center-block">
+					<img  src="${s.img}" width="80"/>
+				</div>
+				<div class="col-md-8 column pull-left">
+					<h4>${s.name}</h4>
+				</div>
+				<div class="col-md-2 column pull-right">
+					 <button type="button" class="btn btn-default" value="${s.id}" onclick="window.location.href('getSchoolba.jsp')">进入</button>
+				</div>
+			 	
+	</div>
+	</c:forEach>
+ </div>
 
 </div>
 	</body>
