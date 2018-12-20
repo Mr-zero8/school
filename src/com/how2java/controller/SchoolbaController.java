@@ -7,10 +7,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.how2java.pojo.Message;
 import com.how2java.pojo.Schoolba;
 import com.how2java.pojo.Talk;
+import com.how2java.service.MessageService;
 import com.how2java.service.SchoolbaService;
 import com.how2java.service.TalkService;
+import com.how2java.service.impl.MessageServiceImpI;
 
 @Controller
 @RequestMapping("")
@@ -20,6 +23,9 @@ public class SchoolbaController {
 
 	@Autowired
 	TalkService talkService;
+	
+	@Autowired
+	MessageService mess;
 	@RequestMapping("getSchoolba")
 	public ModelAndView getSchoolba() {
 		ModelAndView mav = new ModelAndView();
@@ -48,5 +54,22 @@ public class SchoolbaController {
 //		mav.setViewName("getSchoolba");
 //		return mav;
 //	}
+	@RequestMapping("shiyan")
+	public ModelAndView shiyan(){
+		
+		Message g=new Message();
+		g.setFaUserID(2);
+		g.setText("sddsd");
+		g.setJieUserID(5);
+		
+		int j=mess.insertMessage(g);
+		if(j>0){
+			System.out.println("cg");
+		}
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("success");
+		return mav;
+	}
 
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.how2java.mapper.fayanMapper">
+	    <!--插入私信  -->
+<select id="selectALLfayan" resultType="com.how2java.pojo.fayan">
+select *from card
+</select>
+     <update id="report" parameterType="com.how2java.pojo.fayan">
+     
+     </update>
+	</mapper>

@@ -3,6 +3,14 @@ package com.how2java.pojo;
 public class User {
 	private String username;
 	private String password;
+    private int id;
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getUsername() {
 		return username;
@@ -22,7 +30,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [username=" + username + ", password=" + password + "]";
+		return "User [username=" + username + ", password=" + password + ", id=" + id + "]";
 	}
+
+
 
 }

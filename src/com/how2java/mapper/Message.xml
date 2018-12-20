@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.how2java.mapper.MessageMapper">
+	    <!--插入私信  -->
+  <insert id="insertMessage" parameterType="com.how2java.pojo.Message">
+         INSERT into message(faUserID,jieUserID,text,Image)VALUES(#{faUserID},#{jieUserID},#{text},#{Image});
+     </insert>		
+     <!--按ID找用户的所有私信  -->
+     <select id="selectAllmessageByid" resultType="com.how2java.pojo.Message" parameterType="int">
+     select *from message where jieUserID=#{jieUserID};
+     </select>
+     
+	</mapper>
