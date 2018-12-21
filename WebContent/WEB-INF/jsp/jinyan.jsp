@@ -10,7 +10,7 @@
 <body>
 <h2>用户发言 - </h2>
 <c:forEach items="${fayanlist}" var="c" varStatus="st">
-<form action="">
+<form action="jinyan">
   <table >
   <tr>
      <td>发言ID：</td>
@@ -18,12 +18,13 @@
   </tr>
     <tr>
     <td>发言：</td>
-    <td><input type="text" name="stuName" value="${c.text} }"></td>
+    <td><input type="text" name="stuName" value="${c.text} "></td>
   </tr>
     <tr>
    <input type="submit" value="举报">
+    <input type='hidden'  id='id' value ="${c.id} "/>
   </tr>
-
+   
   </table>
 </form>
 	    </c:forEach>

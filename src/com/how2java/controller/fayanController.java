@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.how2java.pojo.User;
 import com.how2java.pojo.fayan;
+import com.how2java.service.UserService;
 import com.how2java.service.fayanService;
 
 @Controller
@@ -17,6 +20,8 @@ public class fayanController {
 
 	@Autowired
 	fayanService fayan1;
+	@Autowired
+	UserService us;
 	
 	@RequestMapping("/zhojian")
 	public String chuangdi(ModelMap model){
@@ -37,12 +42,16 @@ public class fayanController {
 	public String selectALLfayan(ModelMap model){
 		List<fayan> a=fayan1.selectALLfayan();
 		model.addAttribute("fayanlist", a);
+
 		return "jinyan";
 	}
-	@RequestMapping(value ="/fayan")
-	public String report(ModelMap model){
+	@RequestMapping(value ="/jinyan")
+	public String reported(ModelMap model,@RequestParam int id){
+
 		List<fayan> a=fayan1.selectALLfayan();
 		model.addAttribute("fayanlist", a);
+		fayan1.jubao(id);
+		
 		return "jinyan";
 	}
 }

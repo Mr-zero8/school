@@ -6,4 +6,6 @@ import com.how2java.pojo.fayan;
 
 public interface fayanService {
 	public  List<fayan> selectALLfayan();
+	
+	public void jubao(int id);
 }

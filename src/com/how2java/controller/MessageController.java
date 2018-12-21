@@ -38,6 +38,7 @@ public class MessageController {
 	      model.addAttribute("jieid", me.getJieUserID());
 	      model.addAttribute("text", me.getText());
 
+	      
 			int j=mess.insertMessage(me);
 			if(j>0){
 				System.out.println("cg");

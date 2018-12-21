@@ -4,6 +4,7 @@ public class User {
 	private String username;
 	private String password;
     private int id;
+    private int report;
 	public int getId() {
 		return id;
 	}
@@ -26,6 +27,16 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+
+
+	public int getReport() {
+		return report;
+	}
+
+	public void setReport(int report) {
+		this.report = report;
 	}
 
 	@Override

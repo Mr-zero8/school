@@ -18,5 +18,11 @@ public class fayanServiceImpI implements fayanService{
 		// TODO Auto-generated method stub
 		return fayan1.selectALLfayan();
 	}
+	@Override
+	public void jubao(int id) {
+		
+		fayan1.jubao(id);
+	}
+
 
 }

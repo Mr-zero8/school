@@ -8,7 +8,8 @@
 <select id="selectALLfayan" resultType="com.how2java.pojo.fayan">
 select *from card
 </select>
-     <update id="report" parameterType="com.how2java.pojo.fayan">
-     
-     </update>
+
+<update id="jubao" parameterType="id">
+update card set reported=1 where id=#{id}
+</update>
 	</mapper>

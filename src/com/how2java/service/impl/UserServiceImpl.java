@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.how2java.mapper.CategoryMapper;
 import com.how2java.mapper.UserMapper;
+import com.how2java.pojo.User;
 import com.how2java.service.UserService;
 
 @Service
@@ -17,5 +18,13 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		userMapper.findUserByNameAndPwd(name, password);
 	}
+
+	@Override
+	public void gaireport(User us) {
+		
+		userMapper.gaireport(us);
+	}
+
+
 
 }
