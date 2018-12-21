@@ -169,7 +169,7 @@
 					<h4>${s.name}</h4>
 				</div>
 				<div class="col-md-2 column pull-right">
-					 <button type="button" class="btn btn-default" value="${s.id}" onclick="window.location.href('getSchoolba.jsp')">进入</button>
+					 <button type="button" class="btn btn-default" value="${s.id}" onclick="window.location.href('getSchoolba')">进入</button>
 				</div>
 			 	
 	</div>

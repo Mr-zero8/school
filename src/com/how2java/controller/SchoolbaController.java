@@ -28,8 +28,8 @@ public class SchoolbaController {
 	@RequestMapping("getSchoolba")
 	public ModelAndView getSchoolba(Page page) {
 		ModelAndView mav = new ModelAndView();
-
-		Schoolba sb = schoolbaService.get(1);
+		
+		Schoolba sb = schoolbaService.get(2);
 
 		PageHelper.offsetPage(page.getStart(), 5);
 		List<Talk> tl = talkService.list();
