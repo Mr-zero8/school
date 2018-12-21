@@ -1,5 +1,6 @@
 package com.how2java.controller;
 
+import java.rmi.server.SocketSecurityException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +27,12 @@ public class SchoolbaController {
 	TalkService talkService;
 
 	@RequestMapping("getSchoolba")
-	public ModelAndView getSchoolba(Page page) {
+
+	public ModelAndView getSchoolba(Page page, Integer id) {
 		ModelAndView mav = new ModelAndView();
-		
-		Schoolba sb = schoolbaService.get(2);
+
+		System.out.println(id);
+		Schoolba sb = schoolbaService.get(id);
 
 		PageHelper.offsetPage(page.getStart(), 5);
 		List<Talk> tl = talkService.list();

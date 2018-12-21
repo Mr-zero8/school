@@ -8,7 +8,7 @@ import com.how2java.pojo.Schoolba;
 import com.how2java.pojo.Talk;
 
 public interface SchoolbaMapper {
-	public Schoolba get(int id);
+	public Schoolba get(@Param("id")Integer id);
 
 	public List<Schoolba> listschool();
 

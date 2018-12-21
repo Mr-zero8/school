@@ -5,8 +5,8 @@
 
 	<mapper namespace="com.how2java.mapper.SchoolbaMapper">
 	    
-		<select id="get"    resultType="Schoolba">
-			SELECT *  FROM schoolba0 Where id = #{id}
+		<select id="get" parameterType="Integer"    resultType="Schoolba">
+			SELECT *  FROM schoolba0 Where id = ${id}
 		</select>
 		
 		<select id="listschool"    resultType="Schoolba">

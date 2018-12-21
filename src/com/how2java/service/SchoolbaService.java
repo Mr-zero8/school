@@ -8,7 +8,7 @@ import com.how2java.pojo.Schoolba;
 import com.how2java.pojo.Talk;
 
 public interface SchoolbaService {
-	Schoolba get(int id);
+	Schoolba get(Integer id);
 
 	List<Talk> list();
 

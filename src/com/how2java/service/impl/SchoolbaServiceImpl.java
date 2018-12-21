@@ -17,7 +17,7 @@ public class SchoolbaServiceImpl implements SchoolbaService {
 	SchoolbaMapper schoolbaMapper;
 
 	@Override
-	public Schoolba get(int id) {
+	public Schoolba get(Integer id) {
 		return schoolbaMapper.get(id);
 	}
 
