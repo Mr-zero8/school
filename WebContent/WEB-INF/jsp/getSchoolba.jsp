@@ -31,7 +31,7 @@
 <body>
 	<div class="container" style="margin-top:20px;border:1px solid red;">
 <!-- 		<div class="row clearfix"> -->
-			<div class="col-md-12 column" style="border:1px solid red;">
+			<div class="col-md-12 column" style="border:1px solid blue;">
 				<div class="row clearfix">
 					<div class="col-md-12 column">
 					  <div class="row clearfix">
@@ -133,7 +133,7 @@
 				</div>
 				<div class="row clearfix">
 				<div class="row clearfix">
-					<div class="col-md-12 column" style="border:1px solid red;">
+					<div class="col-md-12 column" style="border:1px solid purple;">
 						<nav class="navbar navbar-default" role="navigation">
 							<ul class="nav navbar-nav">
 								<li class="active"><a
@@ -143,9 +143,8 @@
 								<li><a href="#">招生政策</a></li>
 								<li><a href="http://www.aiit.edu.cn/">校园官网</a></li>
 							</ul>
-							<ul class="nav navbar-nav navbar-right">
-
-							</ul>
+<!-- 							<ul class="nav navbar-nav navbar-right"> -->
+<!-- 							</ul> -->
 						</nav>
 					</div>
 
@@ -154,7 +153,7 @@
 
 			</div>
 			<div class="col-md-12 column"
-				style="background-color: #F4F6F9; margin-bottom: 19px;">
+				style="background-color: #F4F6F9; margin-bottom: 19px;margin-top: -21px;">
 				<c:forEach items="${tl}" var="t" varStatus="st">
 					<div class="row clearfix">
 
@@ -173,7 +172,7 @@
 						</div>
 						<div class="col-md-3 column" style="width:210px;border: 1px solid green;padding: 26px;">
 							<div>
-								<small>最新回复：${t.updatetime}</small>
+								<small>最新回复:${t.updatetime}</small>
 							</div>
 						</div>
 					</div>
@@ -206,19 +205,21 @@
 
 			<div class="col-md-12 column"
 				style="margin-top: 10px;margin-bottom:200px; background-color: #F4F6F9;border:1px solid red;">
+				<div class="col-md-8 column" style="border:1px solid red;">
 				<p style="margin-top: 18px;">
 					<span class="glyphicon glyphicon-pencil"></span> 发表你的看法吧
 				</p>
+				</div>
 				<div class="col-md-8 column"
-					style="margin-bottom: 25px; margin-top: 15px;">
+					style="margin-bottom: 25px; margin-top: 15px;border:1px solid blue;">
 					<input type="text" class="form-control" placeholder="此处填写标题"
 						style="height: 40px; font-size: 22px;">
 				</div>
-				<div class="col-md-8 column" style="margin-bottom: 15px;">
+				<div class="col-md-8 column" style="margin-bottom: 15px;border:1px solid red;">
 					<textarea rows="9" cols="114" placeholder="此处填写内容"
 						style="resize: none; width: 100%;"></textarea>
 				</div>
-				<div class="col-md-8 column" style="margin-bottom: 15px;">
+				<div class="col-md-8 column" style="margin-bottom: 15px;border:1px solid red;">
 					<button type="button" class="btn btn-primary pull-right">发表</button>
 				</div>
 			</div>

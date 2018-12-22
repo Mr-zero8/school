@@ -39,6 +39,8 @@ public class SchoolbaController {
 		List<Talk> tl = talkService.list();
 		int total = (int) new PageInfo<>(tl).getTotal();
 		mav.addObject("tl", tl);
+
+		
 		page.caculateLast(total);
 
 		mav.addObject("schoolbaid", sb.getId());
