@@ -15,42 +15,42 @@
 
 <style>
 .center-schoolname {
-	width: 66%;
-	padding: 42px;
-	border: 1px solid #F00;
+
+ 	width: 67%; 
+	padding: 21px;
+	border: 1px solid green;
 }
 
-.center-button {
-	width: 16%;
-	padding: 42px;
-	border: 1px solid #F00;
+.div-schoolimg {
+ 	width: 91px;
+	padding: 0px;
+	border: 1px solid blue;
 }
 
-.div-1 {
-	border: 1px solid #F00;
-}
 
 </style>
 </head>
 <body>
-	<div class="container">
+	<div class="container" style="border:1px solid red;margin-top:25px;">
 		<div class="row clearfix" style="margin-bottom: 19px;">
-			<div class="col-md-2 column">
-				<img alt="140x140"
+			<div class="col-md-2 column" style="border:1px solid red;width:120px;">
+				<img alt="140x140" width="90px"
 					src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/xcwIXcWexgcrN8evw7IWXyUBUIdB6bj5dXePRp8bCNA!/r/dL8AAAAAAAAA" />
 			</div>
-			<div class="col-md-8 column">
+			<div class="col-md-8 column" style="border:1px solid red;height:92px;padding:10px;">
 				<h2>
 					Hi,欢迎来到谈校风生！
 					</h>
 			</div>
-			<div class="col-md-2 column">
-				<button type="button" class="btn btn-link" style="">登陆</button>
-				<button type="button" class="btn btn-link" style="">注册</button>
-			</div>
+				<div class="col-md-2 column pull-right" style="border:1px solid red;height:92px;">	
+					<div class="pull-right row clearfix" style="border:1px solid red;margin-top:55px;">
+						<button type="button" class="btn btn-link" style="">登陆</button>
+						<button type="button" class="btn btn-link" style="">注册</button>
+					</div>
+				</div>
 		</div>
 		<div class="row clearfix">
-			<div class="col-md-12 column">
+			<div class="col-md-12 column" style="border:1px solid red;">
 				<nav class="navbar navbar-default navbar-inverse" role="navigation">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -59,7 +59,7 @@
 								class="icon-bar"></span><span class="icon-bar"></span><span
 								class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">主页</a>
+						<a class="navbar-brand" href="searchlist">主页</a>
 					</div>
 
 					<div class="collapse navbar-collapse"
@@ -108,7 +108,7 @@
 				</nav>
 			</div>
 		</div>
-		<div class="row clearfix" style="margin-bottom: 10px;">
+		<div class="row clearfix" style="border:1px solid red;margin-bottom: 6px;">
 			<div class="col-md-12 column">
 				<div class="carousel slide" id="carousel-618885"
 					data-ride="carousel" data-interval="4000" data-pause="false">
@@ -121,34 +121,28 @@
 					<div class="carousel-inner">
 						<div class="item active">
 							<img alt=""
-								src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/cB94zoh3lA.vUxggGqr8yNM7LH8MaVsBbhH1BEN*3pA!/r/dL0AAAAAAAAA" />
+								src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/wFMpa7*67DVOnwgJH3toUI.lBxh6vzyKEHRzF2Lekpk!/r/dFMBAAAAAAAA" />
 							<div class="carousel-caption">
-								<h4>First Thumbnail label</h4>
-								<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-									quam. Donec id elit non mi porta gravida at eget metus. Nullam
-									id dolor id nibh ultricies vehicula ut id elit.</p>
+								<h4>文字标题</h4>
+								<p>文字内容</p>
 							</div>
 						</div>
 						<div class="item">
 							<img alt=""
-								src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/6JekDjRq5mYSMUTd2gw4hGUPo8tjYV*gy7ab3GprEQg!/r/dD4BAAAAAAAA" />
+								src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/5FZ8oFRCqVhywXU*YxNxsyesD9KEAZ2n7OJtE7iFcZ4!/r/dL8AAAAAAAAA" />
 							<div class="carousel-caption">
-								<h4>Second Thumbnail label</h4>
-								<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-									quam. Donec id elit non mi porta gravida at eget metus. Nullam
-									id dolor id nibh ultricies vehicula ut id elit.</p>
+								<h4>文字标题</h4>
+								<p>文字内容</p>
 							</div>
 						</div>
 						<div class="item">
 							<img alt=""
-								src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/46uXs6apFHY4D2ZsK7cW5S60vQ3stBgXxX8FOFfD1bo!/r/dMEAAAAAAAAA" />
+								src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/Ou5ARCyy*aPlVufNmSTiUW5eV46UGtyvQjKHn09vTSY!/r/dEcBAAAAAAAA" />
 							<div class="carousel-caption">
-								<h4>Third Thumbnail label</h4>
-								<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-									quam. Donec id elit non mi porta gravida at eget metus. Nullam
-									id dolor id nibh ultricies vehicula ut id elit.</p>
+								<h4>文字标题</h4>
+								<p>文字内容</p>
 							</div>
-						</div>
+						</div>											
 					</div>
 					<a class="left carousel-control" href="#carousel-618885"
 						data-slide="prev"><span
@@ -160,27 +154,26 @@
 			</div>
 		</div>
 
-		<div class="row clearfix">
+
 			<c:forEach items="${ss}" var="s" varStatus="st">
 				<div class="div-1 col-md-12 column"
-					style="margin-bottom: 25px; margin-top: 15px;">
-					<div class="row clearfix">
-						<div class="div-1 col-md-2 column center-block">
-							<img src="${s.img}" width="130" />
+					style="margin-bottom: 15px; margin-top: 15px;">
+					<div class="row clearfix" style="background-color: #F4F6F9;">
+						<div class="div-schoolimg col-md-2 column center-block" >
+							<img src="${s.img}" width="90" />
 						</div>
 						<div class="center-schoolname col-md-8 column center-block">
 							<h4>
 								<a style="font-size: 25px;" href="getSchoolba?id=${s.id}">${s.name}</a>
 							</h4>
 						</div>
-						<div class="center-button col-md-2 column center-block">
-							<button type="button" class="btn btn-default" value="${s.id}"
-								onclick="window.location.href('getSchoolba')">这个按钮没用</button>
+						<div class="col-md-2 column center-block">
+
 						</div>
 					</div>
 				</div>
 			</c:forEach>
-		</div>
+
 
 	</div>
 </body>

@@ -16,8 +16,9 @@
 .center {
 	width: 200px;
 	border: 1px solid #F00;
-	padding: 20px;
+	padding: 33px;
 }
+
 
 .div-height {
 	border: 1px solid #F00;
@@ -28,20 +29,12 @@
 </head>
 
 <body>
-	<form method="post" class="navbar-form navbar-right"
-		action="getSchoolba">
-		<div class="form-group">
-			<input type="text" name="id" class="form-control" />
-		</div>
-
-		<button type="submit" class="btn btn-default">搜索</button>
-		<button type="submit" class="btn btn-default">自动匹配</button>
-	</form>
-	<div class="container">
-		<div class="row clearfix">
-			<div class="col-md-12 column">
+	<div class="container" style="margin-top:20px;border:1px solid red;">
+<!-- 		<div class="row clearfix"> -->
+			<div class="col-md-12 column" style="border:1px solid red;">
 				<div class="row clearfix">
 					<div class="col-md-12 column">
+					  <div class="row clearfix">
 						<nav class="navbar navbar-default navbar-inverse"
 							role="navigation">
 							<div class="navbar-header">
@@ -74,7 +67,7 @@
 								</ul>
 								<form class="navbar-form navbar-right" role="search">
 									<div class="form-group">
-										<input type="text" class="form-control" />
+										<input type="text" name="id'='${schoolbaid}" class="form-control" />
 									</div>
 									<button type="submit" class="btn btn-default">搜索</button>
 									<button type="submit" class="btn btn-default">自动匹配</button>
@@ -95,38 +88,52 @@
 							</div>
 
 						</nav>
+						</div>
 					</div>
 				</div>
 				<div class="row clearfix" style="background-color: #F4F6F9;">
-					<div class="col-md-2 column">
-						<img alt="140x140" src="${schoolbaimg}" width="192" />
-					</div>
-					<div class="col-md-3 column">
+					<div class="col-md-2 column"style="width:192px;">
 						<div class="row clearfix">
-							<div class="col-md-12 column">
+						<img alt="140x140" src="${schoolbaimg}" width="192" style="border: 1px solid #F00;" />
+						</div>
+					</div>
+					<div class="col-md-6 column pull-left" style="border: 1px solid green;height:194px;">
+						<div class="row clearfix">
+							<div class="col-md-12 column" style="border: 1px solid gray;padding: 9px;" >
+								
 								<h2>${schoolbaname}</h2>
 							</div>
 						</div>
 						<div class="row clearfix">
-							<div class="div-height col-md-12 column">
-								<button type="button" class="btn btn-default pull-right"
-									style="margin-top: 0px;">关注</button>
+							<div class="col-md-12 column" style="border: 1px solid red;">
+								<div class="row clearfix">
+								<span class="text pull-right">${schoolbalocation}</span>
+								</div>
 							</div>
 						</div>
 						<div class="row clearfix">
-							<div class="div-height col-md-12 column">
+							<div class="col-md-12 column center-block" style="border: 1px solid blue;height:50px;">
+								<div class="row clearfix">
 								<p class="text-muted">关注量：${schoolbaconcern}</p>
 								<p class="text-muted">讨论帖：${schoolbatalkcount}</p>
+								</div>
+							</div>
+						</div>
+						<div class="row clearfix">
+							<div class="col-md-12 column center-block" style="border: 1px solid red;height:37px;">
+								<div class="row clearfix">
+								<button class="btn btn-info pull-left">关注</button>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 column" style="margin-top: 180px;">
-						<span class="text">${schoolbalocation}</span>
-					</div>
-					<div class="col-md-3 column"></div>
+<!-- 					<div class="col-md-3 column" style="border: 1px solid blue;height:193px;width:378px;"> -->
+						
+<!-- 					</div> -->
 				</div>
 				<div class="row clearfix">
-					<div class="col-md-12 column">
+				<div class="row clearfix">
+					<div class="col-md-12 column" style="border:1px solid red;">
 						<nav class="navbar navbar-default" role="navigation">
 							<ul class="nav navbar-nav">
 								<li class="active"><a
@@ -139,9 +146,10 @@
 							<ul class="nav navbar-nav navbar-right">
 
 							</ul>
+						</nav>
 					</div>
 
-					</nav>
+				</div>	
 				</div>
 
 			</div>
@@ -150,51 +158,54 @@
 				<c:forEach items="${tl}" var="t" varStatus="st">
 					<div class="row clearfix">
 
-						<div class="col-md-7 column">
-							<h3>
+						<div class="col-md-7 column" style="border: 1px solid green;padding: 16px;margin-right: 30px;margin-bottom: 5px;">
+							<h4>
 								<span class="badge">${t.talkcount}</span><a href="#">${t.title}</a>
-							</h3>
+							</h4>
 						</div>
-						<div class="col-md-3 column">
+						<div class="col-md-2 column" style="border: 1px solid red;padding: 26px;margin-right: 40px;">
 
-							<div class="center">
+							<div>
 								<a style="color: black;" href="#"
 									class="glyphicon glyphicon-user">${t.author}</a>
 							</div>
 
 						</div>
-						<div class="col-md-2 column">
-							<div class="center">
-								<small><h4>最新回复：${t.updatetime}</h4> </small>
+						<div class="col-md-3 column" style="width:210px;border: 1px solid green;padding: 26px;">
+							<div>
+								<small>最新回复：${t.updatetime}</small>
 							</div>
 						</div>
 					</div>
 				</c:forEach>
 			</div>
-			<div class="col-md-12 column" style="margin-bottom: 10px;">
+			<div class="col-md-12 column" style="border:1px solid red;margin-bottom: 10px;">
+				<div class="row clearfix">
 				<div class="col-md-12 column">
+					<div class="row clearfix">
 					<ul class="pagination pull-left">
-						<li><a href="?start=0" style="color: black;">首页</a></li>
+						<li><a href="?start=0&id=${schoolbaid}" style="color: black;">首页</a></li>
 						<li><a style="color: black;"
-							<c:if test="${page.start-page.count>=0}"> href="?start=${page.start-page.count}"</c:if>>&laquo;</a></li>
+							<c:if test="${page.start-page.count>=0}"> href="?start=${page.start-page.count}&id=${schoolbaid}"</c:if>>&laquo;</a></li>
 						<li <c:if test="${page.start/5+1==1}">class="active"</c:if>><a
-							style="color: black;" href="?start=0">1</a></li>
+							style="color: black;" href="?start=0&id=${schoolbaid}">1</a></li>
 						<li <c:if test="${page.start/5+1==2}">class="active"</c:if>><a
-							style="color: black;" href="?start=5">2</a></li>
+							style="color: black;" href="?start=5&id=${schoolbaid}">2</a></li>
 						<li <c:if test="${page.start/5+1==3}">class="active"</c:if>><a
-							style="color: black;" href="?start=10">3</a></li>
+							style="color: black;" href="?start=10&id=${schoolbaid}">3</a></li>
 						<%-- 						<li <c:if test="${page.start/5+1==4}">class="active"</c:if>><a href="?start=15">4</a></li> --%>
 						<%-- 						<li <c:if test="${page.start/5+1==5}">class="active"</c:if>><a href="?start=${page.start=4*5}">5</a></li> --%>
 						<li><a style="color: black;"
-							<c:if test="${page.start-page.count!=page.last-5}"> href="?start=${page.start+page.count}"</c:if>>&raquo;</a></li>
-						<li><a style="color: black;" href="?start=${page.last}">尾页</a></li>
+							<c:if test="${page.start-page.count!=page.last-5}"> href="?start=${page.start+page.count}&id=${schoolbaid}"</c:if>>&raquo;</a></li>
+						<li><a style="color: black;" href="?start=${page.last}&id=${schoolbaid}">尾页</a></li>
 					</ul>
+					</div>
 				</div>
-
+				</div>
 			</div>
 
 			<div class="col-md-12 column"
-				style="margin-top: 10px; background-color: #F4F6F9;">
+				style="margin-top: 10px;margin-bottom:200px; background-color: #F4F6F9;border:1px solid red;">
 				<p style="margin-top: 18px;">
 					<span class="glyphicon glyphicon-pencil"></span> 发表你的看法吧
 				</p>
@@ -211,7 +222,7 @@
 					<button type="button" class="btn btn-primary pull-right">发表</button>
 				</div>
 			</div>
-		</div>
+<!-- 		</div> -->
 	</div>
 
 </body>

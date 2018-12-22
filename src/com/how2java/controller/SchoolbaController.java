@@ -30,9 +30,10 @@ public class SchoolbaController {
 
 	public ModelAndView getSchoolba(Page page, Integer id) {
 		ModelAndView mav = new ModelAndView();
-
+		
 		System.out.println(id);
 		Schoolba sb = schoolbaService.get(id);
+		
 
 		PageHelper.offsetPage(page.getStart(), 5);
 		List<Talk> tl = talkService.list();
@@ -40,14 +41,18 @@ public class SchoolbaController {
 		mav.addObject("tl", tl);
 		page.caculateLast(total);
 
+		mav.addObject("schoolbaid", sb.getId());
 		mav.addObject("schoolbaname", sb.getName());
 		mav.addObject("schoolbaconcern", sb.getConcern());
 		mav.addObject("schoolbatalkcount", sb.getTalkcount());
 		mav.addObject("schoolbalocation", sb.getLocation());
 		mav.addObject("schoolbaimg", sb.getImg());
+		
 		mav.setViewName("getSchoolba");
 		return mav;
 	}
+	
+
 
 	@RequestMapping("listSchoolba")
 	public ModelAndView listSchoolba() {
