@@ -10,9 +10,9 @@ import com.how2java.pojo.Talk;
 public interface SchoolbaMapper {
 	public Schoolba get(@Param("id")Integer id);
 
-	public List<Schoolba> listschool();
+//	public List<Schoolba> listschool();
 
-	public List<Talk> list();
+//	public List<Talk> list(@Param("id")Integer id);
 
 	public List<Schoolba> searchlist(@Param("string") String string);
 

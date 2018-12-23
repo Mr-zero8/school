@@ -153,13 +153,13 @@
 
 			</div>
 			<div class="col-md-12 column"
-				style="background-color: #F4F6F9; margin-bottom: 19px;margin-top: -21px;">
+				style="margin-bottom: 19px;margin-top: -21px;">
 				<c:forEach items="${tl}" var="t" varStatus="st">
 					<div class="row clearfix">
 
 						<div class="col-md-7 column" style="border: 1px solid green;padding: 16px;margin-right: 30px;margin-bottom: 5px;">
 							<h4>
-								<span class="badge">${t.talkcount}</span><a href="#">${t.title}</a>
+								<span class="badge">${t.talkcount}</span><a href="listTalkDetail?id=${schoolbaid}&talkid=${t.id}">${t.title}</a>
 							</h4>
 						</div>
 						<div class="col-md-2 column" style="border: 1px solid red;padding: 26px;margin-right: 40px;">

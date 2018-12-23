@@ -10,6 +10,7 @@ public class Talk {
 	private String author;
 	private String starttime;
 	private String updatetime;
+	private int schoolid;
 
 	public int getId() {
 		return id;
@@ -56,11 +57,19 @@ public class Talk {
 	}
 
 	public void setUpdatetime(String updatetime) {
-		int i = Integer.parseInt(updatetime); 
-		long l = i*1000L;
-		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");//这个是你要转成后的时间的格式
-		updatetime = sdf.format(new Date(l));   // 时间戳转换成时间
+		int i = Integer.parseInt(updatetime);
+		long l = i * 1000L;
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");// 这个是你要转成后的时间的格式
+		updatetime = sdf.format(new Date(l)); // 时间戳转换成时间
 		this.updatetime = updatetime;
+	}
+
+	public int getSchoolid() {
+		return schoolid;
+	}
+
+	public void setSchoolid(int schoolid) {
+		this.schoolid = schoolid;
 	}
 
 }

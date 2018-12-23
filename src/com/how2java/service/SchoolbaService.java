@@ -10,9 +10,9 @@ import com.how2java.pojo.Talk;
 public interface SchoolbaService {
 	Schoolba get(Integer id);
 
-	List<Talk> list();
+//	List<Talk> list(Integer id);
 
-	List<Schoolba> listschool();
+//	List<Schoolba> listschool();
 
 	List<Schoolba> searchlist(String string);
 	// List<TalkDetail> listtalkdetail();

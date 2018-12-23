@@ -21,16 +21,16 @@ public class SchoolbaServiceImpl implements SchoolbaService {
 		return schoolbaMapper.get(id);
 	}
 
-	@Override
-	public List<Talk> list() {
-		return schoolbaMapper.list();
-	}
+//	@Override
+//	public List<Talk> list(Integer id) {
+//		return schoolbaMapper.list(id);
+//	}
 
-	@Override
-	public List<Schoolba> listschool() {
-		// TODO Auto-generated method stub
-		return schoolbaMapper.listschool();
-	}
+//	@Override
+//	public List<Schoolba> listschool() {
+//		// TODO Auto-generated method stub
+//		return schoolbaMapper.listschool();
+//	}
 
 	@Override
 	public List<Schoolba> searchlist(String string) {

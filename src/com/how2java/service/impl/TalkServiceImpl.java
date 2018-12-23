@@ -15,14 +15,14 @@ public class TalkServiceImpl implements TalkService {
 	TalkMapper talkMapper;
 
 	@Override
-	public List<Talk> list() {
+	public List<Talk> list(Integer id) {
 		// TODO Auto-generated method stub
-		return talkMapper.list();
+		return talkMapper.list(id);
 	}
 
-	@Override
-	public Talk get(Integer id) {
-		return talkMapper.get(id);
-	}
+//	@Override
+//	public Talk get(Integer id) {
+//		return talkMapper.get(id);
+//	}
 
 }

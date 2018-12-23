@@ -13,19 +13,19 @@ import com.how2java.service.TalkService;
 @Controller
 @RequestMapping
 public class TalkController {
-	@Autowired
-	TalkService talkService;
+//	@Autowired
+//	TalkService talkService;
 
-	@RequestMapping("listTalk")
-	public ModelAndView listTalk() {
-		ModelAndView mav = new ModelAndView();
-		List<Talk> tl = talkService.list();
-
-		mav.addObject("tl", tl);
-
-		mav.setViewName("listTalk");
-		return mav;
-	}
+//	@RequestMapping("listTalk")
+//	public ModelAndView listTalk(Integer id) {
+//		ModelAndView mav = new ModelAndView();
+//		List<Talk> tl = talkService.list(id);
+//
+//		mav.addObject("tl", tl);
+//
+//		mav.setViewName("listTalk");
+//		return mav;
+//	}
 
 //	@RequestMapping("getTalk")
 //	public ModelAndView getTalk(Integer id) {

@@ -4,10 +4,11 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 	<mapper namespace="com.how2java.mapper.TalkMapper">
-	    
+	
+<!-- 		加载校吧帖子 -->	    
 		<select id="list"    resultType="Talk">
 			SELECT id,title,talkcount,author,starttime,updatetime
-				FROM talk_
+				FROM talk_ where schoolid = ${id}
 		</select>
 		
 	</mapper>

@@ -39,8 +39,8 @@
 			</div>
 			<div class="col-md-8 column" style="border:1px solid red;height:92px;padding:10px;">
 				<h2>
-					Hi,欢迎来到谈校风生！
-					</h>
+					Hi,欢迎来到谈校风生！admin
+					</h2>
 			</div>
 				<div class="col-md-2 column pull-right" style="border:1px solid red;height:92px;">	
 					<div class="pull-right row clearfix" style="border:1px solid red;margin-top:55px;">
