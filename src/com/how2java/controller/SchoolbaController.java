@@ -37,6 +37,7 @@ public class SchoolbaController {
 
 		System.out.println(id);
 		Schoolba sb = schoolbaService.get(id);
+//		TalkDetail t= talkDetailService.get(talkid);
 
 		PageHelper.offsetPage(page.getStart(), 5);
 
@@ -49,6 +50,7 @@ public class SchoolbaController {
 //		mav.addObject("td", td);
 
 		page.caculateLast(total);
+//		mav.addObject("talkid", t.getId());
 		System.out.println("sb.getId()："+sb.getId());
 		mav.addObject("schoolbaid", sb.getId());
 		mav.addObject("schoolbaname", sb.getName());

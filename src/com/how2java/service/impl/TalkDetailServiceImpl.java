@@ -21,4 +21,10 @@ public class TalkDetailServiceImpl implements TalkDetailService {
 		return talkDetailMapper.listdetail(id,talkid);
 	}
 
+	@Override
+	public TalkDetail get(Integer talkid) {
+		// TODO Auto-generated method stub
+		return talkDetailMapper.get(talkid);
+	}
+
 }

@@ -30,16 +30,21 @@ public class TalkDetailController {
 		ModelAndView mav = new ModelAndView();
 
 		Schoolba sb = schoolbaService.get(id);
+		TalkDetail t = talkDetailService.get(talkid);
 
-		PageHelper.offsetPage(page.getStart(), 5);
+		PageHelper.offsetPage(page.getStart(), 6);
 		List<TalkDetail> td = talkDetailService.listdetail(id, talkid);
 
 		int total = (int) new PageInfo<>(td).getTotal();
 
 		mav.addObject("td", td);
+		mav.addObject("t", t);
 
 		page.caculateLast(total);
-
+		
+//		System.out.println("t.getId():"+t.getId());
+//		
+//		 mav.addObject("talkidd", t.getId());
 		mav.addObject("schoolbaid", sb.getId());
 		mav.addObject("schoolbaname", sb.getName());
 		mav.addObject("schoolbaconcern", sb.getConcern());

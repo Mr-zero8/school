@@ -18,39 +18,39 @@
 
  	width: 67%; 
 	padding: 21px;
-	border: 1px solid green;
+	border: 1px solid1 green;
 }
 
 .div-schoolimg {
  	width: 91px;
 	padding: 0px;
-	border: 1px solid blue;
+	border: 1px solid1 blue;
 }
 
 
 </style>
 </head>
 <body>
-	<div class="container" style="border:1px solid red;margin-top:25px;">
+	<div class="container" style="border:1px solid1 red;margin-top:25px;">
 		<div class="row clearfix" style="margin-bottom: 19px;">
-			<div class="col-md-2 column" style="border:1px solid red;width:120px;">
+			<div class="col-md-2 column" style="border:1px solid1 red;width:120px;">
 				<img alt="140x140" width="90px"
 					src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/xcwIXcWexgcrN8evw7IWXyUBUIdB6bj5dXePRp8bCNA!/r/dL8AAAAAAAAA" />
 			</div>
-			<div class="col-md-8 column" style="border:1px solid red;height:92px;padding:10px;">
+			<div class="col-md-8 column" style="border:1px solid1 red;height:92px;padding:10px;">
 				<h2>
 					Hi,欢迎来到谈校风生！admin
 					</h2>
 			</div>
-				<div class="col-md-2 column pull-right" style="border:1px solid red;height:92px;">	
-					<div class="pull-right row clearfix" style="border:1px solid red;margin-top:55px;">
+				<div class="col-md-2 column pull-right" style="border:1px solid1 red;height:92px;">	
+					<div class="pull-right row clearfix" style="border:1px solid1 red;margin-top:55px;">
 						<button type="button" class="btn btn-link" style="">登陆</button>
 						<button type="button" class="btn btn-link" style="">注册</button>
 					</div>
 				</div>
 		</div>
 		<div class="row clearfix">
-			<div class="col-md-12 column" style="border:1px solid red;">
+			<div class="col-md-12 column" style="border:1px solid1 red;">
 				<nav class="navbar navbar-default navbar-inverse" role="navigation">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -108,7 +108,7 @@
 				</nav>
 			</div>
 		</div>
-		<div class="row clearfix" style="border:1px solid red;margin-bottom: 6px;">
+		<div class="row clearfix" style="border:1px solid1 red;margin-bottom: 6px;">
 			<div class="col-md-12 column">
 				<div class="carousel slide" id="carousel-618885"
 					data-ride="carousel" data-interval="4000" data-pause="false">
