@@ -22,9 +22,9 @@ public class TalkDetailServiceImpl implements TalkDetailService {
 	}
 
 	@Override
-	public TalkDetail get(Integer talkid) {
+	public TalkDetail gettalkid(Integer talkid) {
 		// TODO Auto-generated method stub
-		return talkDetailMapper.get(talkid);
+		return talkDetailMapper.gettalkid(talkid);
 	}
 
 }

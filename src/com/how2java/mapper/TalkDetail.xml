@@ -11,7 +11,7 @@
 		</select>
 
 <!-- 		寻找帖子id -->
-		<select id="get" parameterType="Integer"    resultType="TalkDetail">
-			SELECT talkid  FROM talkdetail_   WHERE sort=(SELECT MAX(sort) FROM talkdetail_)
+		<select id="gettalkid"     resultType="TalkDetail">
+			SELECT id AS talkid FROM talk_   WHERE id= ${talkid}
 		</select>
 	</mapper>

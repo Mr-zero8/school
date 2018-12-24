@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class TalkDetail {
 	private int id;
+	private int talkid;
 	private float sort;
 	private String authorname;
 	private String authorphoto;
@@ -17,12 +18,12 @@ public class TalkDetail {
 	}
 
 	public float getSort() {
-//		if (sort % 1 != 0) {
-//			return ((int) (sort * 100) - (int) sort * 100);
-//		} else {
-//			return (int) (sort);
-//		}
-		 return sort;
+		// if (sort % 1 != 0) {
+		// return ((int) (sort * 100) - (int) sort * 100);
+		// } else {
+		// return (int) (sort);
+		// }
+		return sort;
 	}
 
 	public void setSort(float sort) {
@@ -31,6 +32,14 @@ public class TalkDetail {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getTalkid() {
+		return talkid;
+	}
+
+	public void setTalkid(int talkid) {
+		this.talkid = talkid;
 	}
 
 	public String getAuthorname() {

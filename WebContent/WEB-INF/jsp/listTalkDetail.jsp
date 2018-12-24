@@ -218,20 +218,20 @@
 				<div class="col-md-12 column">
 					<div class="row clearfix">
 					<ul class="pagination pull-left">
-						<li><a href="?start=0&id=${schoolbaid}" style="color: black;">首页</a></li>
+						<li><a href="?start=0&id=${schoolbaid}&talkid=${talkid}" style="color: black;">首页</a></li>
 						<li><a style="color: black;"
 							<c:if test="${page.start-page.count>=0}"> href="?start=${page.start-page.count}&id=${schoolbaid}&talkid=${schoolbaid}"</c:if>>&laquo;</a></li>
 						<li <c:if test="${page.start/5+1==1}">class="active"</c:if>><a
-							style="color: black;" href="?start=0&id=${schoolbaid}&talkid=${schoolbaid}">1</a></li>
+							style="color: black;" href="?start=0&id=${schoolbaid}&talkid=${talkid}">1</a></li>
 						<li <c:if test="${page.start/5+1==2}">class="active"</c:if>><a
-							style="color: black;" href="?start=5&id=${schoolbaid}&talkid=${schoolbaid}">2</a></li>
+							style="color: black;" href="?start=5&id=${schoolbaid}&talkid=${talkid}">2</a></li>
 						<li <c:if test="${page.start/5+1==3}">class="active"</c:if>><a
-							style="color: black;" href="?start=10&id=${schoolbaid}&talkid=${schoolbaid}">3</a></li>
+							style="color: black;" href="?start=10&id=${schoolbaid}&talkid=${talkid}">3</a></li>
 <%-- 												<li <c:if test="${page.start/5+1==4}">class="active"</c:if>><a href="?start=15">4</a></li> --%>
 <%-- 												<li <c:if test="${page.start/5+1==5}">class="active"</c:if>><a href="?start=${page.start=4*5}">5</a></li> --%>
 						<li><a style="color: black;"
-							<c:if test="${page.start-page.count!=page.last-5}"> href="?start=${page.start+page.count}&id=${schoolbaid}&talkid=${schoolbaid}"</c:if>>&raquo;</a></li>
-						<li><a style="color: black;" href="?start=${page.last}&id=${schoolbaid}&talkid=${schoolbaid}">尾页</a></li>
+							<c:if test="${page.start-page.count!=page.last-5}"> href="?start=${page.start+page.count}&id=${schoolbaid}&talkid=${talkid}"</c:if>>&raquo;</a></li>
+						<li><a style="color: black;" href="?start=${page.last}&id=${schoolbaid}&talkid=${talkid}">尾页</a></li>
 					</ul>
 					</div>
 				</div>
