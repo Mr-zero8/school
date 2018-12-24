@@ -40,18 +40,59 @@ public class fayanController {
     }
 	@RequestMapping(value ="/fayan")
 	public String selectALLfayan(ModelMap model){
+		//加载所有评论
 		List<fayan> a=fayan1.selectALLfayan();
 		model.addAttribute("fayanlist", a);
 
+		//加载所有举报
+		List<fayan> repotred=fayan1.chuli();
+		model.addAttribute("jubaolist", repotred);
+		
+		//已经被处理的举报
+		List<fayan> ed=fayan1.reported();
+		model.addAttribute("reported", ed);
+		
 		return "jinyan";
 	}
 	@RequestMapping(value ="/jinyan")
 	public String reported(ModelMap model,@RequestParam int id){
-
+	
+		fayan1.jubao(id);
+		
+		//加载所有评论
 		List<fayan> a=fayan1.selectALLfayan();
 		model.addAttribute("fayanlist", a);
-		fayan1.jubao(id);
+
+		//加载所有举报
+		List<fayan> repotred=fayan1.chuli();
+		model.addAttribute("jubaolist", repotred);
+		
+		//已经被处理的举报
+		List<fayan> ed=fayan1.reported();
+		model.addAttribute("reported", ed);
 		
 		return "jinyan";
 	}
+	@RequestMapping(value ="/chulijubao")
+	public String chulijubao(@RequestParam int id,ModelMap model,@RequestParam int userid){
+
+		
+		fayan1.pingbifayan("该评论因被举报而屏蔽", id);
+		us.gaireport(userid);
+		
+		//加载所有评论
+		List<fayan> a=fayan1.selectALLfayan();
+		model.addAttribute("fayanlist", a);
+
+		//加载所有举报
+		List<fayan> repotred=fayan1.chuli();
+		model.addAttribute("jubaolist", repotred);
+		
+		//已经被处理的举报
+		List<fayan> ed=fayan1.reported();
+		model.addAttribute("reported", ed);
+		
+		return "jinyan";
+	}
+	
 }

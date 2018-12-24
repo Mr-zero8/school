@@ -4,12 +4,30 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 	<mapper namespace="com.how2java.mapper.fayanMapper">
-	    <!--插入私信  -->
+	    
+	    
 <select id="selectALLfayan" resultType="com.how2java.pojo.fayan">
 select *from card
 </select>
-
-<update id="jubao" parameterType="id">
+<!-- 举报某评论 -->
+<update id="jubao" parameterType="int">
 update card set reported=1 where id=#{id}
 </update>
+<!--加载被举报的评论  -->
+<select id="chuli" resultType="com.how2java.pojo.fayan">
+select * from card where reported=1
+</select>
+<!--举报为实，修改评论 -->
+<update id="pingbifayan" >
+update card set text=#{0},reported=2 where id=#{1}
+</update>
+<!--已经被认定为违规的言论  -->
+<select id="reported" resultType="com.how2java.pojo.fayan">
+select * from card where reported=2;
+</select>
+<!-- 发言 -->
+<insert id="fayan" parameterType="com.how2java.pojo.fayan">
+INSERT into card (id,userid,text,reported,image)values(#{id},#{userid},#{text},#{reported},#{image})
+</insert>
+
 	</mapper>

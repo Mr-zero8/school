@@ -6,10 +6,14 @@
 	<mapper namespace="com.how2java.mapper.UserMapper">
 	    
 		<select id="findUserByNameAndPwd"  parameterType="map"  resultType="User">
-			select username,password from user_  where username=#{name} and password=#{password}
+			select * from user_  where username=#{name} and password=#{password} 
 		</select>
-<update id="gaireport" parameterType="com.how2java.pojo.User">
+<update id="gaireport" parameterType="int">
 
 update user_  set report=1  where id=#{id} 
+</update>
+
+<update id="addImage" >
+update user_ set image=#{0} where id=#{1}
 </update>
 	</mapper>

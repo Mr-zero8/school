@@ -22,11 +22,46 @@
   </tr>
     <tr>
    <input type="submit" value="举报">
-    <input type='hidden'  id='id' value ="${c.id} "/>
+    <input type='hidden'  id='id' name="id" value ="${c.id} "/>
   </tr>
    
   </table>
 </form>
+	    </c:forEach>
+	    
+	    
+	    <h2>处理举报 - </h2>
+<c:forEach items="${jubaolist}" var="c" varStatus="st">
+<form action="chulijubao">
+  <table >
+  <tr>
+     <td>发言ID：</td>
+    <td><input type="text" name="userid" value="${c.userid}"></td>
+  </tr>
+    <tr>
+    <td>发言：</td>
+    <td><input type="text" name="stuName" value="${c.text} "></td>
+  </tr>
+    <tr>
+   <input type="submit" value="禁言">
+    <input type='hidden'  id='id' name="id" value ="${c.id} "/>
+  </tr>
+   
+  </table>
+</form>
+	    </c:forEach>
+	    <h2>已经处理 - </h2>
+	    <c:forEach items="${reported}" var="c" varStatus="st">
+  <table >
+  <tr>
+     <td>发言ID：</td>
+    <td><input type="text" name="userid" value="${c.userid}"></td>
+  </tr>
+    <tr>
+    <td>发言：</td>
+    <td><input type="text" name="stuName" value="${c.text} "></td>
+  </tr>
+  </table>
 	    </c:forEach>
 </body>
 </html>

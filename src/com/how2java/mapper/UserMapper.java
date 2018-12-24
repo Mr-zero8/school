@@ -8,7 +8,10 @@ public interface UserMapper {
 	// public void login(String username, String passwrod);
 	//
 	// public void getu(@Param("string")String username);
-	public void findUserByNameAndPwd(@Param("name") String name, @Param("password") String password);
+	public User findUserByNameAndPwd(@Param("name") String name, @Param("password") String password);
 	
-	public void gaireport(User us);
+	public void gaireport(int id);
+	
+	//用户上传头像
+	public void addImage(String image,int id);
 }

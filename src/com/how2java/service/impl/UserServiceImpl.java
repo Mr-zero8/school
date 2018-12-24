@@ -14,15 +14,21 @@ public class UserServiceImpl implements UserService {
 	UserMapper userMapper;
 
 	@Override
-	public void login(String name, String password) {
+	public User login(String name, String password) {
 		// TODO Auto-generated method stub
-		userMapper.findUserByNameAndPwd(name, password);
+		return userMapper.findUserByNameAndPwd(name, password);
 	}
 
 	@Override
-	public void gaireport(User us) {
+	public void gaireport(int id) {
 		
-		userMapper.gaireport(us);
+		userMapper.gaireport(id);
+	}
+
+	@Override
+	public void addImage(String image, int id) {
+		// TODO Auto-generated method stub
+		userMapper.addImage(image, id);
 	}
 
 

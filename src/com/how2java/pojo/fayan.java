@@ -5,7 +5,7 @@ private int userid;
 private String text;
 private int id;
 private int reported;
-
+private String image;
 
 public int getReported() {
 	return reported;
@@ -33,6 +33,12 @@ public void setText(String text) {
 }
 
 
+public String getImage() {
+	return image;
+}
+public void setImage(String image) {
+	this.image = image;
+}
 @Override
 public String toString() {
 	return "fayan [userid=" + userid + ", text=" + text + ", id=" + id + "]";

@@ -12,4 +12,30 @@
 		<select id="get"    resultType="Talk">
 			SELECT *  FROM talk_ Where id = #{id}
 		</select>
+		
+		<!-- 举报某评论 -->
+<update id="jubao" parameterType="int">
+update talkdetail_ set reported=1 where id=#{id}
+</update>
+
+
+<!--加载被举报的评论  -->
+<select id="chuli" resultType="com.how2java.pojo.Talk">
+select * from talkdetail_ where reported=1
+</select>
+<!--举报为实，修改评论 -->
+<update id="pingbifayan" >
+update talkdetail_ set authortext=#{0},reported=2 where id=#{1}
+</update>
+<!--已经被认定为违规的言论  -->
+<select id="reported" resultType="com.how2java.pojo.Talk">
+select * from talkdetail_ where reported=2;
+</select>
+<!-- 发言 -->
+<insert id="fayan" parameterType="com.how2java.pojo.Talk">
+INSERT into talkdetail_ (id,authorname,authorphoto,authortext,writetime,img,sort,talkid,reported)values
+(#{id},#{authorname},#{authorphoto},#{authortext},#{writetime},#{img},#{sort},#{talkid},#{reported})
+</insert>
+		
+		
 	</mapper>
