@@ -177,7 +177,7 @@
 
 
 		<div class="col-md-12 column"
-			style="margin-top: -23px; margin-bottom: 200px; margin-bottom: 15px; border: 1px solid11 red;">
+			style="margin-top: -19px; margin-bottom: 200px; margin-bottom: 15px; border: 1px solid11 red;">
 			<div class="row clearfix">
 				<div class="col-md-3 column " style="margin-right: 2px;border: 1px solid1 blue;width:283px;">
 					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />

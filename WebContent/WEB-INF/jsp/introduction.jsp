@@ -189,7 +189,7 @@
 				</div>
 			</div>
 		</div>
-			<div class="col-md-12 column "
+			<div class="col-md-12 column"
 				style="margin-bottom: 15px; border: 1px solid11 red;">
 				<button type="button" class="row clearfix btn btn-primary pull-right">修改</button>
 			</div>

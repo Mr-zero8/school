@@ -12,8 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.how2java.pojo.Category;
-import com.how2java.service.CategoryService;
 import com.how2java.service.UserService;
 import com.how2java.util.Page;
 

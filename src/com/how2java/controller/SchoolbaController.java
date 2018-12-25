@@ -36,21 +36,20 @@ public class SchoolbaController {
 
 		System.out.println(id);
 		Schoolba sb = schoolbaService.get(id);
-		// TalkDetail t= talkDetailService.get(talkid);
+
 
 		PageHelper.offsetPage(page.getStart(), 5);
 
 		List<Talk> tl = talkService.list(id);
-		// List<TalkDetail> td = talkDetailService.listdetail(id);
+
 
 		int total = (int) new PageInfo<>(tl).getTotal();
 
 		mav.addObject("tl", tl);
-		// mav.addObject("td", td);
-		System.out.println("!!!#!#!#!#" + sb.getWebsite());
+
+
 		page.caculateLast(total);
-		// mav.addObject("talkid", t.getId());
-		System.out.println("sb.getId()：" + sb.getId());
+
 		mav.addObject("schoolbaid", sb.getId());
 		mav.addObject("schoolbaname", sb.getName());
 		mav.addObject("schoolbaconcern", sb.getConcern());

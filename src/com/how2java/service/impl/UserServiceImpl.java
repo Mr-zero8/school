@@ -3,7 +3,6 @@ package com.how2java.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.how2java.mapper.CategoryMapper;
 import com.how2java.mapper.UserMapper;
 import com.how2java.service.UserService;
 
