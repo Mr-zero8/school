@@ -1,17 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="t"%>
-<%@ page session="false" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%-- <%@page import="com.yunzainfo.pitcher.privilege.entity.BaseUsers"%> --%>
+<%-- <%@page import="com.yunzainfo.pitcher.common.constants.WebConstants"%> --%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/resources/images/favicon.ico" type="image/x-icon">
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>page</title>
-<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<link href="css/carousel.css" rel="stylesheet">
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8" />
+    <style type="text/css" ></style>
+    <link href="/lossys/resources/css/email.css" rel="stylesheet" type="text/css">
+    <link href="/lossys/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        function getJumpUrl() {
+            window.open("http://www.aiit.edu.cn/")//跳转路径
+        }
+
+    </script>
+
 </head>
+
 <body>
-hello tiles,I'm home.111
+<div class="enter">
+    <div class="enter-inner">
+        <img  class="img-responsive" src="/lossys/resources/img/libraryLogo.png"/>
+    </div>
+    <button type="button" class="enter-button" value="  " onclick="getJumpUrl()" >点击进行预约座位</button>
+</div>
 </body>
+
 </html>

@@ -1,6 +1,5 @@
 package com.how2java.controller;
 
-import java.rmi.server.SocketSecurityException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +9,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.how2java.pojo.Category;
+
 import com.how2java.pojo.Schoolba;
 import com.how2java.pojo.Talk;
-import com.how2java.pojo.TalkDetail;
+
 import com.how2java.service.SchoolbaService;
 import com.how2java.service.TalkDetailService;
 import com.how2java.service.TalkService;
@@ -37,27 +36,28 @@ public class SchoolbaController {
 
 		System.out.println(id);
 		Schoolba sb = schoolbaService.get(id);
-//		TalkDetail t= talkDetailService.get(talkid);
+		// TalkDetail t= talkDetailService.get(talkid);
 
 		PageHelper.offsetPage(page.getStart(), 5);
 
 		List<Talk> tl = talkService.list(id);
-//		List<TalkDetail> td = talkDetailService.listdetail(id);
+		// List<TalkDetail> td = talkDetailService.listdetail(id);
 
 		int total = (int) new PageInfo<>(tl).getTotal();
 
 		mav.addObject("tl", tl);
-//		mav.addObject("td", td);
-
+		// mav.addObject("td", td);
+		System.out.println("!!!#!#!#!#" + sb.getWebsite());
 		page.caculateLast(total);
-//		mav.addObject("talkid", t.getId());
-		System.out.println("sb.getId()："+sb.getId());
+		// mav.addObject("talkid", t.getId());
+		System.out.println("sb.getId()：" + sb.getId());
 		mav.addObject("schoolbaid", sb.getId());
 		mav.addObject("schoolbaname", sb.getName());
 		mav.addObject("schoolbaconcern", sb.getConcern());
 		mav.addObject("schoolbatalkcount", sb.getTalkcount());
 		mav.addObject("schoolbalocation", sb.getLocation());
-		mav.addObject("schoolbaimg", sb.getImg());
+		mav.addObject("schoolbalogo", sb.getSchoollogo());
+		mav.addObject("schoolbawebsite", sb.getWebsite());
 
 		mav.setViewName("getSchoolba");
 		return mav;
@@ -95,15 +95,63 @@ public class SchoolbaController {
 		return mav;
 	}
 
-	// @RequestMapping("listTalk")
-	// public ModelAndView listTalk() {
-	// ModelAndView mav = new ModelAndView();
-	// List<Talk> tl = schoolbaService.list();
-	//
-	// mav.addObject("tl", tl);
-	//
-	// mav.setViewName("getSchoolba");
-	// return mav;
-	// }
+	@RequestMapping("introduction")
+	public ModelAndView introduction(Integer id) {
+		ModelAndView mav = new ModelAndView();
+
+		Schoolba sb = schoolbaService.get(id);
+
+		mav.addObject("sb", sb);
+		mav.addObject("schoolbaid", sb.getId());
+		mav.addObject("schoolbaname", sb.getName());
+		mav.addObject("schoolbaconcern", sb.getConcern());
+		mav.addObject("schoolbatalkcount", sb.getTalkcount());
+		mav.addObject("schoolbalocation", sb.getLocation());
+		mav.addObject("schoolbalogo", sb.getSchoollogo());
+		mav.addObject("schoolbawebsite", sb.getWebsite());
+		mav.addObject("schoolbaintroduction", sb.getIntroduction());
+
+		mav.setViewName("introduction");
+		return mav;
+	}
+
+	@RequestMapping("picture")
+	public ModelAndView picture(Integer id) {
+		ModelAndView mav = new ModelAndView();
+
+		Schoolba sb = schoolbaService.get(id);
+
+		mav.addObject("sb", sb);
+		mav.addObject("schoolbaid", sb.getId());
+		mav.addObject("schoolbaname", sb.getName());
+		mav.addObject("schoolbaconcern", sb.getConcern());
+		mav.addObject("schoolbatalkcount", sb.getTalkcount());
+		mav.addObject("schoolbalocation", sb.getLocation());
+		mav.addObject("schoolbalogo", sb.getSchoollogo());
+		mav.addObject("schoolbawebsite", sb.getWebsite());
+
+		mav.setViewName("picture");
+		return mav;
+	}
+
+	@RequestMapping("policy")
+	public ModelAndView policy(Integer id) {
+		ModelAndView mav = new ModelAndView();
+
+		Schoolba sb = schoolbaService.get(id);
+
+		mav.addObject("sb", sb);
+		mav.addObject("schoolbaid", sb.getId());
+		mav.addObject("schoolbaname", sb.getName());
+		mav.addObject("schoolbaconcern", sb.getConcern());
+		mav.addObject("schoolbatalkcount", sb.getTalkcount());
+		mav.addObject("schoolbalocation", sb.getLocation());
+		mav.addObject("schoolbalogo", sb.getSchoollogo());
+		mav.addObject("schoolbawebsite", sb.getWebsite());
+		mav.addObject("schoolbaintroduction", sb.getIntroduction());
+
+		mav.setViewName("policy");
+		return mav;
+	}
 
 }

@@ -50,7 +50,8 @@ public class TalkDetailController {
 		mav.addObject("schoolbaconcern", sb.getConcern());
 		mav.addObject("schoolbatalkcount", sb.getTalkcount());
 		mav.addObject("schoolbalocation", sb.getLocation());
-		mav.addObject("schoolbaimg", sb.getImg());
+		mav.addObject("schoolbalogo", sb.getSchoollogo());
+		mav.addObject("schoolbawebsite", sb.getWebsite());
 		mav.setViewName("listTalkDetail");
 		return mav;
 

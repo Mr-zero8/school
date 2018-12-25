@@ -18,39 +18,46 @@
 
  	width: 67%; 
 	padding: 21px;
-	border: 1px solid1 green;
+	border: 1px solid11 green;
 }
 
 .div-schoolimg {
  	width: 91px;
 	padding: 0px;
-	border: 1px solid1 blue;
+	border: 1px solid11 blue;
 }
 
-
+<script type="text/javascript">
+$(function(){
+    $(".wrap li").click(function() {
+        $(this).siblings('li').removeClass('active');  // 删除其兄弟元素的样式
+        $(this).addClass('active');                    // 为点击元素添加类名
+    });
+}); 
+</script>
 </style>
 </head>
 <body>
-	<div class="container" style="border:1px solid1 red;margin-top:25px;">
+	<div class="container" style="border:1px solid11 red;margin-top:25px;">
 		<div class="row clearfix" style="margin-bottom: 19px;">
-			<div class="col-md-2 column" style="border:1px solid1 red;width:120px;">
-				<img alt="140x140" width="90px"
+			<div class="col-md-2 column" style="border:1px solid11 red;width:120px;">
+				<img  width="90px"
 					src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/xcwIXcWexgcrN8evw7IWXyUBUIdB6bj5dXePRp8bCNA!/r/dL8AAAAAAAAA" />
 			</div>
-			<div class="col-md-8 column" style="border:1px solid1 red;height:92px;padding:10px;">
+			<div class="col-md-8 column" style="border:1px solid11 red;height:92px;padding:10px;">
 				<h2>
-					Hi,欢迎来到谈校风生！admin
+					Hi,欢迎你来到谈校风生！admin
 					</h2>
 			</div>
-				<div class="col-md-2 column pull-right" style="border:1px solid1 red;height:92px;">	
-					<div class="pull-right row clearfix" style="border:1px solid1 red;margin-top:55px;">
+				<div class="col-md-2 column pull-right" style="border:1px solid11 red;height:92px;">	
+					<div class="pull-right row clearfix" style="border:1px solid11 red;margin-top:55px;">
 						<button type="button" class="btn btn-link" style="">登陆</button>
 						<button type="button" class="btn btn-link" style="">注册</button>
 					</div>
 				</div>
 		</div>
 		<div class="row clearfix">
-			<div class="col-md-12 column" style="border:1px solid1 red;">
+			<div class="col-md-12 column" style="border:1px solid11 red;">
 				<nav class="navbar navbar-default navbar-inverse" role="navigation">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -59,12 +66,12 @@
 								class="icon-bar"></span><span class="icon-bar"></span><span
 								class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="searchlist">主页</a>
+						<a class="navbar-brand " href="searchlist">Speak</a>
 					</div>
 
 					<div class="collapse navbar-collapse"
 						id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav">
+						<ul class="wrap nav navbar-nav">
 							<li class="active"><a href="#">最近热门</a></li>
 							<li><a href="#">我的收藏</a></li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -108,7 +115,7 @@
 				</nav>
 			</div>
 		</div>
-		<div class="row clearfix" style="border:1px solid1 red;margin-bottom: 6px;">
+		<div class="row clearfix" style="border:1px solid11 red;margin-bottom: 6px;">
 			<div class="col-md-12 column">
 				<div class="carousel slide" id="carousel-618885"
 					data-ride="carousel" data-interval="4000" data-pause="false">
@@ -160,7 +167,7 @@
 					style="margin-bottom: 15px; margin-top: 15px;">
 					<div class="row clearfix" style="background-color: #F4F6F9;">
 						<div class="div-schoolimg col-md-2 column center-block" >
-							<img src="${s.img}" width="90" />
+							<img src="${s.schoollogo}" width="90" />
 						</div>
 						<div class="center-schoolname col-md-8 column center-block">
 							<h4>

@@ -93,7 +93,7 @@
 	</div>
 	<div class="row clearfix" style="background-color:#F4F6F9;" >
 		<div class="col-md-2 column">
-			<img alt="140x140" src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/PPVWa7TTn16*VQhYwDI8Y8uECwTaJh5pNIRwe2r*u*k!/r/dD4BAAAAAAAA" />
+			<img  src="http://r.photo.store.qq.com/psb?/V10dqOUK0ZhMOZ/PPVWa7TTn16*VQhYwDI8Y8uECwTaJh5pNIRwe2r*u*k!/r/dD4BAAAAAAAA" />
 		</div>
 		<div class="col-md-3 column">
 		
