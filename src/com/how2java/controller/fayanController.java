@@ -18,7 +18,7 @@ import com.how2java.service.fayanService;
 //Controller之间的转跳并传值
 public class fayanController {
 
-	@Autowired
+	/*@Autowired
 	fayanService fayan1;
 	@Autowired
 	UserService us;
@@ -93,6 +93,6 @@ public class fayanController {
 		model.addAttribute("reported", ed);
 		
 		return "jinyan";
-	}
+	}*/
 	
 }

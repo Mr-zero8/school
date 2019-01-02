@@ -14,4 +14,14 @@ public interface UserMapper {
 	
 	//用户上传头像
 	public void addImage(String image,int id);
+	//查找用户靠id
+	public User byid(int id);
+	//登录是否成功
+	public int shifou(@Param("name") String name, @Param("password") String password);
+	//用户是否已经存在
+	public int findUserByUserName(String username);
+	//插入新用户
+	public void insertUser(User a);
+	//验证唯一邮箱
+	public int emailone(String a);
 }

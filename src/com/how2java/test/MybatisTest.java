@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.how2java.mapper.CategoryMapper;
-import com.how2java.pojo.Category;
 import com.how2java.util.Page;
 
 @RunWith(SpringJUnit4ClassRunner.class)

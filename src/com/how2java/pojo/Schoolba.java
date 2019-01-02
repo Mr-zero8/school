@@ -11,7 +11,33 @@ public class Schoolba {
 	private String schoollogo;
 	private String location;
 	private String img;
+	private String website;
+	private String introduction;
+	private String policy;
 
+	public String getPolicy() {
+		return policy;
+	}
+
+	public void setPolicy(String policy) {
+		this.policy = policy;
+	}
+
+	public String getIntroduction() {
+		return introduction;
+	}
+
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
+	}
+
+	public String getWebsite() {
+		return website;
+	}
+
+	public void setWebsite(String website) {
+		this.website = website;
+	}
 
 	public int getId() {
 		return id;

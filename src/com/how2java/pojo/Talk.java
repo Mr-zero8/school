@@ -11,24 +11,6 @@ public class Talk {
 	private String starttime;
 	private String updatetime;
 	private int schoolid;
-	private int reported;
-	private String img;
-	
-	public String getImg() {
-		return img;
-	}
-
-	public void setImg(String img) {
-		this.img = img;
-	}
-
-	public int getReported() {
-		return reported;
-	}
-
-	public void setReported(int reported) {
-		this.reported = reported;
-	}
 
 	public int getId() {
 		return id;
@@ -91,4 +73,3 @@ public class Talk {
 	}
 
 }
-

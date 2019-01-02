@@ -5,7 +5,7 @@ private int id;
 private int faUserID;
 private int jieUserID;
 private String text;
-private String Image;
+private String image;
 public int getId() {
 	return id;
 }
@@ -31,15 +31,15 @@ public void setText(String text) {
 	this.text = text;
 }
 public String getImage() {
-	return Image;
+	return image;
 }
 public void setImage(String image) {
-	Image = image;
+	this.image = image;
 }
 @Override
 public String toString() {
 	return "Message [id=" + id + ", faUserID=" + faUserID + ", jieUserID=" + jieUserID + ", text=" + text + ", Image="
-			+ Image + "]";
+			+ image + "]";
 }
 
 

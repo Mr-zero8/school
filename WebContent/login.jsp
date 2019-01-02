@@ -7,8 +7,25 @@
 <title>主页</title>
 	<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+    
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
+<%
+    HttpSession s = request.getSession();  
+    
+    String mess=(String)session.getAttribute("msg");
+    if(mess==null){
+         
+    }
+ 
+ else{%>
+    <script type="text/javascript">
+        alert("<%=mess%>");
+</script>
+ <%session.removeAttribute("msg"); %>
+    
+<% }%>
 <body>
 <div class="container">
 	<div class="row clearfix" style="margin-bottom:19px;">
@@ -21,8 +38,42 @@
 			</h>
 		</div>
 		<div class="col-md-2 column" >
-			<button type="button" class="btn btn-link" style="text-right;">登陆</button>
-			<button type="button" class="btn btn-link" style="text-right;">注册</button>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">登陆</button>
+			<button type="button" onclick="window.location.href = '/ssm/regist.jsp'" class="btn btn-link" style="text-right;">注册</button>
+			
+			
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<form action="login" method="get">
+				<h4 class="modal-title" id="myModalLabel">
+					模态框（Modal）标题
+				</h4>
+			</div>
+			<div class="modal-body">
+			<table>
+				<tr><td>账号<input type="text" id="username" required="required" name="username"/></td></tr>
+				<tr><td>密码<input type="text" id="password" required="required" name="password"/></td></tr>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button type="submit" class="btn btn-primary" >
+					提交更改
+				</button>
+			</div>
+				</form>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+			
+			
+			
 		</div>
 	</div>
 	<div class="row clearfix" >
@@ -65,9 +116,10 @@
 							</ul>
 						</li>
 					</ul>
-					<form class="navbar-form navbar-right" role="search">
+					<form class="navbar-form navbar-right" role="search" action="searchlist" method="get">
 						<div class="form-group">
-							<input type="text" class="form-control" />
+							<input type="text" class="form-control" id="string"/>
+							<input type="hidden" class="id" id="userid" name="userid" value="0">
 						</div> <button type="submit" class="btn btn-default">搜索</button>
 						<button type="submit" class="btn btn-default">自动匹配</button>
 					</form>
@@ -76,7 +128,11 @@
 							 <a href="#">成绩录入</a>
 						</li>
 						<li>
-							 <a href="#">个人设置</a>
+					<form name="personal" id="personal" action="personal" method="get">  
+							<input type="hidden" name="userid" id="userid" value="0"/>  
+							<a  onclick="document.getElementById('personal').submit();">个人中心</a>
+							<!-- style="font-size: 25px;" -->  
+					</form>
 						</li>
 						<li class="dropdown">
 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<strong class="caret"></strong></a>

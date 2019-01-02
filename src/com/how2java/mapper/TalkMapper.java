@@ -2,21 +2,14 @@ package com.how2java.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.how2java.pojo.Talk;
-import com.how2java.pojo.fayan;
 
 public interface TalkMapper {
-	public List<Talk> list();
+	public List<Talk> list(@Param("id")Integer id);
 
-	public Talk get(Integer id);
+	public Talk byidone(int id);
 	
-
-	//举报该层
-	public void jubao(int id);
-	//展示被举报的评论
-	public List<fayan> chuli();
-	//屏蔽违规发言
-	public void pingbifayan(String a,int b);
-	//已经处理的举报
-	public List<fayan> reported();
+//	public Talk get(Integer id);
 }

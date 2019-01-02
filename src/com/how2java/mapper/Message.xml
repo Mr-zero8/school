@@ -6,7 +6,7 @@
 	<mapper namespace="com.how2java.mapper.MessageMapper">
 	    <!--插入私信  -->
   <insert id="insertMessage" parameterType="com.how2java.pojo.Message">
-         INSERT into message(faUserID,jieUserID,text,Image)VALUES(#{faUserID},#{jieUserID},#{text},#{Image});
+         INSERT into message(faUserID,jieUserID,text,image)VALUES(#{faUserID},#{jieUserID},#{text},#{image});
      </insert>		
      <!--按ID找用户的所有私信  -->
      <select id="selectAllmessageByid" resultType="com.how2java.pojo.Message" parameterType="int">

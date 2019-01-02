@@ -13,12 +13,12 @@
 <form action="jinyan">
   <table >
   <tr>
-     <td>发言ID：</td>
-    <td><input type="text" name="stuName" value="${c.userid}"></td>
+     <td>发言人：</td>
+    <td><input type="text" name="stuName" value="${c.authorname}"></td>
   </tr>
     <tr>
     <td>发言：</td>
-    <td><input type="text" name="stuName" value="${c.text} "></td>
+    <td><input type="text" name="stuName" value="${c.authortext} "></td>
   </tr>
     <tr>
    <input type="submit" value="举报">
@@ -35,16 +35,17 @@
 <form action="chulijubao">
   <table >
   <tr>
-     <td>发言ID：</td>
-    <td><input type="text" name="userid" value="${c.userid}"></td>
+     <td>发言人：</td>
+    <td><input type="text" name="username" value="${c.authorname}"></td>
   </tr>
     <tr>
     <td>发言：</td>
-    <td><input type="text" name="stuName" value="${c.text} "></td>
+    <td><input type="text" name="stuName" value="${c.authortext} "></td>
   </tr>
     <tr>
    <input type="submit" value="禁言">
     <input type='hidden'  id='id' name="id" value ="${c.id} "/>
+    <input type='hidden'  id='userid' name="userid" value ="${c.authorid} "/>
   </tr>
    
   </table>
@@ -55,11 +56,11 @@
   <table >
   <tr>
      <td>发言ID：</td>
-    <td><input type="text" name="userid" value="${c.userid}"></td>
+    <td><input type="text" name="userid" value="${c.authorname}"></td>
   </tr>
     <tr>
     <td>发言：</td>
-    <td><input type="text" name="stuName" value="${c.text} "></td>
+    <td><input type="text" name="stuName" value="${c.authortext} "></td>
   </tr>
   </table>
 	    </c:forEach>
