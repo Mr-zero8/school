@@ -15,13 +15,13 @@
 <style>
 .center {
 	width: 200px;
-	border: 1px solid11 #F00;
+	border: 1px solid1 #F00;
 	padding: 33px;
 }
 
 
 .div-height {
-	border: 1px solid11 #F00;
+	border: 1px solid1 #F00;
 	width: 300px;
 	height: 70px
 }
@@ -43,9 +43,9 @@ $(function(){
 </script>
 </head>
 <body>
-	<div class="container" style="margin-top:20px;border:1px solid11 red;">
+	<div class="container" style="margin-top:20px;border:1px solid1 red;">
 <!-- 		<div class="row clearfix"> -->
-			<div class="col-md-12 column" style="border:1px solid11 blue;">
+			<div class="col-md-12 column" style="border:1px solid1 blue;">
 				<div class="row clearfix">
 					<div class="col-md-12 column">
 					  <div class="row clearfix">
@@ -59,7 +59,7 @@ $(function(){
 										class="icon-bar"></span><span class="icon-bar"></span><span
 										class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="searchlist">主页</a>
+								<a class="navbar-brand" href="index">主页</a>
 							</div>
 
 							<div class="collapse navbar-collapse"
@@ -79,13 +79,13 @@ $(function(){
 											<li><a href="#">One more separated link</a></li>
 										</ul></li>
 								</ul>
-								<form class="navbar-form navbar-right" role="search">
+									<form class="navbar-form navbar-right" role="search" action="index" >
 									<div class="form-group">
-										<input type="text" name="id'='${schoolbaid}" class="form-control" />
-									</div>
-									<button type="submit" class="btn btn-default">搜索</button>
+									<input type="text" class="form-control" id="string"/>
+									<input type="hidden"  id="userid" name="userid" value="${userid}">
+									</div> <button type="submit" class="btn btn-default">搜索</button>
 									<button type="submit" class="btn btn-default">自动匹配</button>
-								</form>
+									</form>
 								<ul class="nav navbar-nav navbar-left">
 									<li><a href="#">成绩录入</a></li>
 									<li><a href="#">个人设置</a></li>
@@ -108,25 +108,25 @@ $(function(){
 				<div class="row clearfix" style="background-color: #F4F6F9;">
 					<div class="col-md-2 column"style="width:192px;">
 						<div class="row clearfix">
-						<img  src="${schoolbalogo}" width="192" style="border: 1px solid11 #F00;" />
+						<img  src="${schoolbalogo}" width="192" style="border: 1px solid1 #F00;" />
 						</div>
 					</div>
-					<div class="col-md-6 column pull-left" style="border: 1px solid11 green;height:194px;">
+					<div class="col-md-6 column pull-left" style="border: 1px solid1 green;height:194px;">
 						<div class="row clearfix">
-							<div class="col-md-12 column" style="border: 1px solid11 gray;padding: 9px;" >
+							<div class="col-md-12 column" style="border: 1px solid1 gray;padding: 9px;" >
 								
 								<h2>${schoolbaname}</h2>
 							</div>
 						</div>
 						<div class="row clearfix">
-							<div class="col-md-12 column" style="border: 1px solid11 red;">
+							<div class="col-md-12 column" style="border: 1px solid1 red;">
 								<div class="row clearfix">
 								<span class="text pull-right">${schoolbalocation}</span>
 								</div>
 							</div>
 						</div>
 						<div class="row clearfix">
-							<div class="col-md-12 column center-block" style="border: 1px solid11 blue;height:50px;">
+							<div class="col-md-12 column center-block" style="border: 1px solid1 blue;height:50px;">
 								<div class="row clearfix">
 								<p class="text-muted">关注量：${schoolbaconcern}</p>
 								<p class="text-muted">讨论帖：${schoolbatalkcount}</p>
@@ -134,20 +134,20 @@ $(function(){
 							</div>
 						</div>
 						<div class="row clearfix">
-							<div class="col-md-12 column center-block" style="border: 1px solid11 red;height:37px;">
+							<div class="col-md-12 column center-block" style="border: 1px solid1 red;height:37px;">
 								<div class="row clearfix">
 								<button class="btn btn-info pull-left">关注</button>
 								</div>
 							</div>
 						</div>
 					</div>
-<!-- 					<div class="col-md-3 column" style="border: 1px solid11 blue;height:193px;width:378px;"> -->
+<!-- 					<div class="col-md-3 column" style="border: 1px solid1 blue;height:193px;width:378px;"> -->
 						
 <!-- 					</div> -->
 				</div>
 				<div class="row clearfix">
 				<div class="row clearfix">
-					<div class="col-md-12 column" style="border:1px solid11 purple;">
+					<div class="col-md-12 column" style="border:1px solid1 purple;">
 						<nav class="navbar navbar-default" role="navigation">
 							<ul class="wrap nav navbar-nav">
 								<li class="active"><a
@@ -167,54 +167,54 @@ $(function(){
 
 			</div>
 
-			<div class="col-md-12 column " style="border:1px solid11 green;margin-top: 0px;padding:0px;">
+			<div class="col-md-12 column " style="border:1px solid1 green;margin-top: 0px;padding:0px;">
 			   <c:forEach items="${td}" var="t" varStatus="st">
 				
 
 				<c:choose>	
 					 
 				<c:when test="${t.sort%1==0}">	
-				<div  class="col-md-12 column " style="background-color:#E0EEEE;border:1px solid11 red;margin-bottom: 40px;padding:27px;">
-						<div class="col-md-2 column" style="border:1px solid11 red;width:124px;">
-							<div style="border:1px solid11 blue;">
+				<div  class="col-md-12 column " style="background-color:#E0EEEE;border:1px solid1 red;margin-bottom: 40px;padding:27px;">
+						<div class="col-md-2 column" style="border:1px solid1 red;width:124px;">
+							<div style="border:1px solid1 blue;">
 								<img  width="90px" src="${t.authorphoto}" />
 							</div>
-							<div class="text-center" style="border:1px solid11 red;">
+							<div class="text-center" style="border:1px solid1 red;">
 								<a href="#" class=text-justify style="color:black;">${t.authorname}</a>
 							</div> 
 						</div>
-						<div class="col-md-8 column" style="border:1px solid11 green;margin-left:20px;">
+						<div class="col-md-8 column" style="border:1px solid1 green;margin-left:20px;">
 							<h4>${t.authortext}</h4>
 							
 							<a href="#" class="pull-right"
 								style="font-size: 15px;">回复</a>
 							<p class="text-muted pull-right">${t.writetime}</p>
 						</div>
-						<div class="col-md-2 column text-center" style="border:1px solid11 red;padding:10px;margin-left:20px;">
+						<div class="col-md-2 column text-center" style="border:1px solid1 red;padding:10px;margin-left:20px;">
 							<h1>#${t.sort}</h1>
 						</div>	
 					</div>							
 				</c:when>
 				<c:otherwise>
-				<div  class="col-md-12" style="border:1px solid11 blue;margin-bottom: 40px;margin-top: -30px;">
-					<div class="col-md-9  pull-right row clearfix" style="margin-bottom: 0px;background-color:#E8E8E8;border:1px solid11 blue;padding:18px;">
-						<div class="col-md-2 column" style="border:1px solid11 red;width:150px;">
-							<div style="border:1px solid11 blue;"class="text-center">
+				<div  class="col-md-12" style="border:1px solid1 blue;margin-bottom: 40px;margin-top: -30px;">
+					<div class="col-md-9  pull-right row clearfix" style="margin-bottom: 0px;background-color:#E8E8E8;border:1px solid1 blue;padding:18px;">
+						<div class="col-md-2 column" style="border:1px solid1 red;width:150px;">
+							<div style="border:1px solid1 blue;"class="text-center">
 								<img  width="50px" src="${t.authorphoto}" />
 							</div>
-							<div class="text-center" style="border:1px solid11 red;">
+							<div class="text-center" style="border:1px solid1 red;">
 								<a href="#" class=text-justify style="color:black;">${t.authorname}</a>
 							</div> 
 						</div>
 						
-						<div class="col-md-9 column" style="width:510px;border:1px solid11 green;margin-right:00px;">
+						<div class="col-md-9 column" style="width:510px;border:1px solid1 green;margin-right:00px;">
 							<h4>${t.authortext}</h4>
 							
 							<a href="#" class="pull-right"
 								style="font-size: 15px;">回复</a>
 							<p class="text-muted pull-right">${t.writetime}</p>
 						</div>
-						<div class="col-md-1 column text-center" style="border:1px solid11 red;padding:10px;margin-left:20px;">
+						<div class="col-md-1 column text-center" style="border:1px solid1 red;padding:10px;margin-left:20px;">
 							<h4>#${t.sort}</h4>
 						</div>
 					</div>	
@@ -228,7 +228,7 @@ $(function(){
 			   </c:forEach>
 			</div>
 			
-			<div class="col-md-12 column" style="border:1px solid11 red;margin-bottom: 10px;">
+			<div class="col-md-12 column" style="border:1px solid1 red;margin-bottom: 10px;">
 				<div class="row clearfix">
 				<div class="col-md-12 column">
 					<div class="row clearfix">
@@ -254,22 +254,22 @@ $(function(){
 			</div>
 
 			<div class="col-md-12 column"
-				style="margin-top: 10px;margin-bottom:200px; background-color: #F4F6F9;border:1px solid11 red;">
-				<div class="col-md-8 column" style="border:1px solid11 red;">
+				style="margin-top: 10px;margin-bottom:200px; background-color: #F4F6F9;border:1px solid1 red;">
+				<div class="col-md-8 column" style="border:1px solid1 red;">
 				<p style="margin-top: 18px;">
 					<span class="glyphicon glyphicon-pencil"></span> 发表你的看法吧
 				</p>
 				</div>
 				<div class="col-md-8 column"
-					style="margin-bottom: 25px; margin-top: 15px;border:1px solid11 blue;">
+					style="margin-bottom: 25px; margin-top: 15px;border:1px solid1 blue;">
 					<input type="text" class="form-control" placeholder="此处填写标题"
 						style="height: 40px; font-size: 22px;">
 				</div>
-				<div class="col-md-8 column" style="margin-bottom: 15px;border:1px solid11 red;">
+				<div class="col-md-8 column" style="margin-bottom: 15px;border:1px solid1 red;">
 					<textarea rows="9" cols="114" placeholder="此处填写内容"
 						style="resize: none; width: 100%;"></textarea>
 				</div>
-				<div class="col-md-8 column" style="margin-bottom: 15px;border:1px solid11 red;">
+				<div class="col-md-8 column" style="margin-bottom: 15px;border:1px solid1 red;">
 					<button type="button" class="btn btn-primary pull-right">发表</button>
 				</div>
 			</div>

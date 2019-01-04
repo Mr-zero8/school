@@ -11,4 +11,20 @@
 				FROM talk_ where schoolid = ${id}
 		</select>
 		
+<!-- 		加载收藏帖子 -->	    
+		<select id="likelist"    resultType="Talk">
+			SELECT id,title,talkcount,author,starttime,updatetime
+				FROM talk_ where userid = ${id}
+		</select>
+	
+<!-- 		关键字搜索帖子 -->	
+		<select id="searchtalk"    resultType="Talk">
+			SELECT id,title,talkcount,author,starttime,updatetime
+				FROM talk_ where userid = ${id}
+		</select>
+		
+<!-- 		delete帖子 -->
+	    <delete id="deletetalk" parameterType="Talk" >
+	        delete from talk_ where id= #{talkid}   
+	    </delete>
 	</mapper>

@@ -2,6 +2,8 @@ package com.how2java.pojo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 public class Talk {
 	private int id;
@@ -11,6 +13,15 @@ public class Talk {
 	private String starttime;
 	private String updatetime;
 	private int schoolid;
+	private List<User> users;
+
+	public List<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<User> users) {
+		this.users = users;
+	}
 
 	public int getId() {
 		return id;

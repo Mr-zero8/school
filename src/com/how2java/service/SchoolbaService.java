@@ -16,4 +16,6 @@ public interface SchoolbaService {
 
 	List<Schoolba> searchlist(String string);
 	// List<TalkDetail> listtalkdetail();
+	
+	void updateinfo(String info);
 }

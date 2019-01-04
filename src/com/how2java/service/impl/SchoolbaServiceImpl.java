@@ -21,16 +21,16 @@ public class SchoolbaServiceImpl implements SchoolbaService {
 		return schoolbaMapper.get(id);
 	}
 
-//	@Override
-//	public List<Talk> list(Integer id) {
-//		return schoolbaMapper.list(id);
-//	}
+	// @Override
+	// public List<Talk> list(Integer id) {
+	// return schoolbaMapper.list(id);
+	// }
 
-//	@Override
-//	public List<Schoolba> listschool() {
-//		// TODO Auto-generated method stub
-//		return schoolbaMapper.listschool();
-//	}
+	// @Override
+	// public List<Schoolba> listschool() {
+	// // TODO Auto-generated method stub
+	// return schoolbaMapper.listschool();
+	// }
 
 	@Override
 	public List<Schoolba> searchlist(String string) {
@@ -38,10 +38,15 @@ public class SchoolbaServiceImpl implements SchoolbaService {
 		return schoolbaMapper.searchlist(string);
 	}
 
-//	@Override
-//	public List<TalkDetail> listtalkdetail() {
-//		// TODO Auto-generated method stub
-//		return schoolbaMapper.listtalkdetail();
-//	}
+	@Override
+	public void updateinfo(String info) {
+		schoolbaMapper.updateinfo(info);
+	}
+
+	// @Override
+	// public List<TalkDetail> listtalkdetail() {
+	// // TODO Auto-generated method stub
+	// return schoolbaMapper.listtalkdetail();
+	// }
 
 }

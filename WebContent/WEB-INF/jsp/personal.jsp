@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>policy</title>
+<title>personal</title>
 <link
 	href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -44,7 +44,8 @@
 
 <body>
 	<!-- 	整体页面框 -->
-	<div class="container" style="margin-top: 20px; border: 1px solid1 red;">
+	<div class="container"
+		style="margin-top: 20px; border: 1px solid1 red;">
 		<!-- 		<div class="row clearfix"> -->
 		<div class="col-md-12 column" style="border: 1px solid1 blue;">
 			<div class="row clearfix">
@@ -109,81 +110,74 @@
 				</div>
 			</div>
 			<!-- 			加载学校信息 -->
-			<div class="row clearfix" style="background-color: #F4F6F9;">
-				<div class="col-md-2 column" style="width: 192px;">
-					<div class="row clearfix">
-						<img  src="${schoolbalogo}" width="192"
-							style="border: 1px solid1 #F00;" />
-					</div>
-				</div>
-				<div class="col-md-6 column pull-left"
-					style="border: 1px solid1 green; height: 194px;">
-					<div class="row clearfix">
-						<div class="col-md-12 column"
-							style="border: 1px solid1 gray; padding: 9px;">
+			<!-- 			<div class="row clearfix" style="background-color: #F4F6F9;"> -->
+			<!-- 				<div class="col-md-2 column" style="width: 192px;"> -->
+			<!-- 					<div class="row clearfix"> -->
+			<%-- 						<img  src="${schoolbalogo}" width="192" --%>
+			<!-- 							style="border: 1px solid1 #F00;" /> -->
+			<!-- 					</div> -->
+			<!-- 				</div> -->
+			<!-- 				<div class="col-md-6 column pull-left" -->
+			<!-- 					style="border: 1px solid1 green; height: 194px;"> -->
+			<!-- 					<div class="row clearfix"> -->
+			<!-- 						<div class="col-md-12 column" -->
+			<!-- 							style="border: 1px solid1 gray; padding: 9px;"> -->
 
-							<h2>${schoolbaname}</h2>
-						</div>
-					</div>
-					<div class="row clearfix">
-						<div class="col-md-12 column" style="border: 1px solid1 red;">
-							<div class="row clearfix">
-								<span class="text pull-right">${schoolbalocation}</span>
-							</div>
-						</div>
-					</div>
-					<div class="row clearfix">
-						<div class="col-md-12 column center-block"
-							style="border: 1px solid1 blue; height: 50px;">
-							<div class="row clearfix">
-								<p class="text-muted">关注量：${schoolbaconcern}</p>
-								<p class="text-muted">讨论帖：${schoolbatalkcount}</p>
-							</div>
-						</div>
-					</div>
-					<div class="row clearfix">
-						<div class="col-md-12 column center-block"
-							style="border: 1px solid1 red; height: 37px;">
-							<div class="row clearfix">
-								<button class="btn btn-info pull-left">关注</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row clearfix">
-				<div class="row clearfix">
-					<div class="col-md-12 column" style="border: 1px solid1 purple;">
-						<nav class="navbar navbar-default" role="navigation">
-							<ul class="wrap nav navbar-nav">
-								<li><a href="getSchoolba?id=${schoolbaid}">谈笑天地</a></li>
-								<li><a href="introduction?id=${schoolbaid}">校园简介</a></li>
-								<li><a href="picture?id=${schoolbaid}">校园风景</a></li>
-								<li class="active"><a href="policy?id=${schoolbaid}">招生政策</a></li>
-								<li><a href="javascript:void(0);"
-									onclick="getJumpUrl();return false;">校园官网</a></li>
-							</ul>
-							<!-- 							<ul class="nav navbar-nav navbar-right"> -->
-							<!-- 							</ul> -->
-						</nav>
-					</div>
+			<%-- 							<h2>${schoolbaname}</h2> --%>
+			<!-- 						</div> -->
+			<!-- 					</div> -->
+			<!-- 					<div class="row clearfix"> -->
+			<!-- 						<div class="col-md-12 column" style="border: 1px solid1 red;"> -->
+			<!-- 							<div class="row clearfix"> -->
+			<%-- 								<span class="text pull-right">${schoolbalocation}</span> --%>
+			<!-- 							</div> -->
+			<!-- 						</div> -->
+			<!-- 					</div> -->
+			<!-- 					<div class="row clearfix"> -->
+			<!-- 						<div class="col-md-12 column center-block" -->
+			<!-- 							style="border: 1px solid1 blue; height: 50px;"> -->
+			<!-- 							<div class="row clearfix"> -->
+			<%-- 								<p class="text-muted">关注量：${schoolbaconcern}</p> --%>
+			<%-- 								<p class="text-muted">讨论帖：${schoolbatalkcount}</p> --%>
+			<!-- 							</div> -->
+			<!-- 						</div> -->
+			<!-- 					</div> -->
+			<!-- 					<div class="row clearfix"> -->
+			<!-- 						<div class="col-md-12 column center-block" -->
+			<!-- 							style="border: 1px solid1 red; height: 37px;"> -->
+			<!-- 							<div class="row clearfix"> -->
+			<!-- 								<button class="btn btn-info pull-left">关注</button> -->
+			<!-- 							</div> -->
+			<!-- 						</div> -->
+			<!-- 					</div> -->
+			<!-- 				</div> -->
+			<!-- 			</div> -->
+			<!-- 			<div class="row clearfix"> -->
+			<!-- 				<div class="row clearfix"> -->
+			<!-- 					<div class="col-md-12 column" style="border: 1px solid1 purple;"> -->
+			<!-- 						<nav class="navbar navbar-default" role="navigation"> -->
+			<!-- 							<ul class="wrap nav navbar-nav"> -->
+			<%-- 								<li><a href="getSchoolba?id=${schoolbaid}">谈笑天地</a></li> --%>
+			<%-- 								<li><a href="introduction?id=${schoolbaid}">校园简介</a></li> --%>
+			<%-- 								<li class="active"><a href="picture?id=${schoolbaid}">校园风景</a></li> --%>
+			<%-- 								<li><a href="policy?id=${schoolbaid}">招生政策</a></li> --%>
+			<!-- 								<li><a href="javascript:void(0);" -->
+			<!-- 									onclick="getJumpUrl();return false;">校园官网</a></li> -->
+			<!-- 							</ul> -->
+			<!-- 														<ul class="nav navbar-nav navbar-right"> -->
+			<!-- 														</ul> -->
+			<!-- 						</nav> -->
+			<!-- 					</div> -->
 
-				</div>
-			</div>
+			<!-- 				</div> -->
+			<!-- 			</div> -->
 
 		</div>
-
-
-
-		<div class="col-md-12 column"
-			style="margin-top: -23px; margin-bottom: 200px; margin-bottom: 15px; border: 1px solid1 red;">
-			<div class="row clearfix">
-				<div class="col-md-12 column row clearfix ">
-					<textarea placeholder="此处填写内容" rows="30"
-						style="resize: none; width: 1140px; font-size: 20px;">${schoolbaintroduction}</textarea>
-				</div>
-			</div>
+		<!-- 我的收藏按钮 -->
+		<div>
+			<a href="userlike?userid=1">我收藏的帖</a>
 		</div>
+
 
 	</div>
 

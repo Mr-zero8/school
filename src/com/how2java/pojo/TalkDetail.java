@@ -13,6 +13,9 @@ public class TalkDetail {
 	private String writetime;
 	private String img;
 
+	public TalkDetail() {
+	}
+
 	public int getId() {
 		return id;
 	}

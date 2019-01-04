@@ -17,6 +17,12 @@
 		<select id="searchlist"  parameterType="String"  resultType="Schoolba">
 			SELECT *  FROM schoolba0 where name like '%${string}%'
 		</select>
+		
+		<!-- 		update学校简介 -->
+		<update id="updateinfo" >
+			UPDATE schoolba0 SET introduction='123123123123' where id=1
+		</update>
+		
 
 
 <!-- 		<select id="list"    resultType="Talk"> -->

@@ -15,12 +15,12 @@
 <style>
 .center {
 	width: 200px;
-	border: 1px solid11 #F00;
+	border: 1px solid1 #F00;
 	padding: 33px;
 }
 
 .div-height {
-	border: 1px solid11 #F00;
+	border: 1px solid1 #F00;
 	width: 300px;
 	height: 70px
 }
@@ -33,23 +33,23 @@
 </script>
 
 <script type="text/javascript">
-$(function(){
-    $(".wrap li").click(function() {
-        $(this).siblings('li').removeClass('active');  // 删除其兄弟元素的样式
-        $(this).addClass('active');                    // 为点击元素添加类名
-    });
-}); 
+	$(function() {
+		$(".wrap li").click(function() {
+			$(this).siblings('li').removeClass('active'); // 删除其兄弟元素的样式
+			$(this).addClass('active'); // 为点击元素添加类名
+		});
+	});
 </script>
 </head>
 
 <body>
-<!-- 	整体页面框 -->
+	<!-- 	整体页面框 -->
 	<div class="container"
-		style="margin-top: 20px; border: 1px solid11 red;">
+		style="margin-top: 20px; border: 1px solid1 red;">
 		<!-- 		<div class="row clearfix"> -->
-		<div class="col-md-12 column" style="border: 1px solid11 blue;">
+		<div class="col-md-12 column" style="border: 1px solid1 blue;">
 			<div class="row clearfix">
-<!-- 				导航栏 -->
+				<!-- 				导航栏 -->
 				<div class="col-md-12 column">
 					<div class="row clearfix">
 						<nav class="navbar navbar-default navbar-inverse"
@@ -62,7 +62,7 @@ $(function(){
 										class="icon-bar"></span><span class="icon-bar"></span><span
 										class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="searchlist">主页</a>
+								<a class="navbar-brand" href="index">主页</a>
 							</div>
 
 							<div class="collapse navbar-collapse"
@@ -82,13 +82,17 @@ $(function(){
 											<li><a href="#">One more separated link</a></li>
 										</ul></li>
 								</ul>
-								<form class="navbar-form navbar-right" role="search">
+								<form class="navbar-form navbar-right" role="search"
+									action="index">
 									<div class="form-group">
-										<input type="text" name="id'='${schoolbaid}"
-											class="form-control" />
+										<input type="text" class="form-control" id="string" /> <input
+											type="hidden" id="userid" name="userid" value="${userid}">
 									</div>
 									<button type="submit" class="btn btn-default">搜索</button>
 									<button type="submit" class="btn btn-default">自动匹配</button>
+								</form>
+								<form action="searchTalk">
+									<button type="submit" class="btn btn-default">搜索帖子</button>
 								</form>
 								<ul class="nav navbar-nav navbar-left">
 									<li><a href="#">成绩录入</a></li>
@@ -109,25 +113,25 @@ $(function(){
 					</div>
 				</div>
 			</div>
-<!-- 			加载学校信息 -->
+			<!-- 			加载学校信息 -->
 			<div class="row clearfix" style="background-color: #F4F6F9;">
 				<div class="col-md-2 column" style="width: 192px;">
 					<div class="row clearfix">
-						<img  src="${schoolbalogo}" width="192"
-							style="border: 1px solid11 #F00;" />
+						<img src="${schoolbalogo}" width="192"
+							style="border: 1px solid1 #F00;" />
 					</div>
 				</div>
 				<div class="col-md-6 column pull-left"
-					style="border: 1px solid11 green; height: 194px;">
+					style="border: 1px solid1 green; height: 194px;">
 					<div class="row clearfix">
 						<div class="col-md-12 column"
-							style="border: 1px solid11 gray; padding: 9px;">
+							style="border: 1px solid1 gray; padding: 9px;">
 
 							<h2>${schoolbaname}</h2>
 						</div>
 					</div>
 					<div class="row clearfix">
-						<div class="col-md-12 column" style="border: 1px solid11 red;">
+						<div class="col-md-12 column" style="border: 1px solid1 red;">
 							<div class="row clearfix">
 								<span class="text pull-right">${schoolbalocation}</span>
 							</div>
@@ -135,7 +139,7 @@ $(function(){
 					</div>
 					<div class="row clearfix">
 						<div class="col-md-12 column center-block"
-							style="border: 1px solid11 blue; height: 50px;">
+							style="border: 1px solid1 blue; height: 50px;">
 							<div class="row clearfix">
 								<p class="text-muted">关注量：${schoolbaconcern}</p>
 								<p class="text-muted">讨论帖：${schoolbatalkcount}</p>
@@ -144,28 +148,28 @@ $(function(){
 					</div>
 					<div class="row clearfix">
 						<div class="col-md-12 column center-block"
-							style="border: 1px solid11 red; height: 37px;">
+							style="border: 1px solid1 red; height: 37px;">
 							<div class="row clearfix">
 								<button class="btn btn-info pull-left">关注</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- 					<div class="col-md-3 column" style="border: 1px solid11 blue;height:193px;width:378px;"> -->
+				<!-- 					<div class="col-md-3 column" style="border: 1px solid1 blue;height:193px;width:378px;"> -->
 
 				<!-- 					</div> -->
 			</div>
 			<div class="row clearfix">
 				<div class="row clearfix">
-					<div class="col-md-12 column" style="border: 1px solid11 purple;">
+					<div class="col-md-12 column" style="border: 1px solid1 purple;">
 						<nav class="navbar navbar-default" role="navigation">
 							<ul class="wrap nav navbar-nav">
-								<li class="active"><a
-									href="getSchoolba?id=${schoolbaid}">谈笑天地</a></li>
+								<li class="active"><a href="getSchoolba?id=${schoolbaid}">谈笑天地</a></li>
 								<li><a href="introduction?id=${schoolbaid}">校园简介</a></li>
 								<li><a href="picture?id=${schoolbaid}">校园风景</a></li>
 								<li><a href="policy?id=${schoolbaid}">招生政策</a></li>
-								<li><a href="javascript:void(0);" onclick="getJumpUrl();return false;">校园官网</a></li>
+								<li><a href="javascript:void(0);"
+									onclick="getJumpUrl();return false;">校园官网</a></li>
 							</ul>
 							<!-- 							<ul class="nav navbar-nav navbar-right"> -->
 							<!-- 							</ul> -->
@@ -182,14 +186,24 @@ $(function(){
 				<div class="row clearfix">
 
 					<div class="col-md-7 column"
-						style="border: 1px solid11 green; padding: 16px; margin-right: 30px; margin-bottom: 5px;">
+						style="border: 1px solid1 green; padding: 16px; margin-right: 30px; margin-bottom: 5px;">
 						<h4>
-							<span class="badge">${t.talkcount}</span><a
-								href="listTalkDetail?id=${schoolbaid}&talkid=${t.id}">${t.title}</a>
+							<span class="badge">${t.talkcount}</span>
+							<!----------------- 传值向listTalkDetail.jsp --------------->
+							<form name="${t.id}" id="${t.id}" action="listTalkDetail"
+								method="get">
+								  <input type="hidden" name="id" id="id" value="${schoolbaid}" /> 
+								<input type="hidden" name="talkid" id="talkid" value="${t.id}" />
+								<input type="hidden" name="userid" id="userid" value="${userid}" /> 
+								<a style="font-size: 25px;"
+									onclick="document.getElementById('${t.id}').submit();">${t.title}</a> 
+
+
+							</form>
 						</h4>
 					</div>
 					<div class="col-md-2 column"
-						style="border: 1px solid11 red; padding: 26px; margin-right: 40px;">
+						style="border: 1px solid1 red; padding: 26px; margin-right: 40px;">
 
 						<div>
 							<a style="color: black;" href="#"
@@ -198,16 +212,20 @@ $(function(){
 
 					</div>
 					<div class="col-md-3 column"
-						style="width: 210px; border: 1px solid11 green; padding: 26px;">
+						style="width: 210px; border: 1px solid1 green; padding: 26px;">
 						<div>
 							<small>最新回复:${t.updatetime}</small>
 						</div>
+						<form action="deleteTalk" method="get">
+							<input type="hidden" name="talkid" id="talkid" value="${t.id}" />
+							<button type="submit">删除</button>
+						</form>
 					</div>
 				</div>
 			</c:forEach>
 		</div>
 		<div class="col-md-12 column"
-			style="border: 1px solid11 red; margin-bottom: 10px;">
+			style="border: 1px solid1 red; margin-bottom: 10px;">
 			<div class="row clearfix">
 				<div class="col-md-12 column">
 					<div class="row clearfix">
@@ -235,24 +253,24 @@ $(function(){
 		</div>
 
 		<div class="col-md-12 column"
-			style="margin-top: 10px; margin-bottom: 200px; background-color: #F4F6F9; border: 1px solid11 red;">
-			<div class="col-md-8 column" style="border: 1px solid11 red;">
+			style="margin-top: 10px; margin-bottom: 200px; background-color: #F4F6F9; border: 1px solid1 red;">
+			<div class="col-md-8 column" style="border: 1px solid1 red;">
 				<p style="margin-top: 18px;">
 					<span class="glyphicon glyphicon-pencil"></span> 发表你的看法吧
 				</p>
 			</div>
 			<div class="col-md-8 column"
-				style="margin-bottom: 25px; margin-top: 15px; border: 1px solid11 blue;">
+				style="margin-bottom: 25px; margin-top: 15px; border: 1px solid1 blue;">
 				<input type="text" class="form-control" placeholder="此处填写标题"
 					style="height: 40px; font-size: 22px;">
 			</div>
 			<div class="col-md-8 column"
-				style="margin-bottom: 15px; border: 1px solid11 red;">
+				style="margin-bottom: 15px; border: 1px solid1 red;">
 				<textarea rows="9" cols="114" placeholder="此处填写内容"
 					style="resize: none; width: 100%;"></textarea>
 			</div>
 			<div class="col-md-8 column"
-				style="margin-bottom: 15px; border: 1px solid11 red;">
+				style="margin-bottom: 15px; border: 1px solid1 red;">
 				<button type="button" class="btn btn-primary pull-right">发表</button>
 			</div>
 		</div>

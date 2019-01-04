@@ -20,9 +20,21 @@ public class TalkServiceImpl implements TalkService {
 		return talkMapper.list(id);
 	}
 
-//	@Override
-//	public Talk get(Integer id) {
-//		return talkMapper.get(id);
-//	}
+	@Override
+	public List<Talk> likelist(Integer id) {
+		// TODO Auto-generated method stub
+		return talkMapper.likelist(id);
+	}
+
+	@Override
+	public void deletetalk(Integer id) {
+		// TODO Auto-generated method stub
+		talkMapper.deletetalk(id);
+	}
+
+	// @Override
+	// public Talk get(Integer id) {
+	// return talkMapper.get(id);
+	// }
 
 }

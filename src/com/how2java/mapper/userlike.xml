@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.how2java.mapper.userlikeMapper">
+	    
+<select id="likewhat" parameterType="int" resultType="userlike">
+select schoolid,title,lastupdate,updatestate,likecount,talkdetailid,talkid,userid,userlike_.id from 
+userlike_,talk_ where userlike_.talkid=talk_.id and userlike_.userid=#{id}
+</select>
+<insert id="shouchang" parameterType="userlike">
+INSERT userlike_ (lastupdate,updatestate,likecount,talkdetailid,talkid,userid)
+VALUES (#{lastupdate},#{updatestate},#{likecount},#{talkdetailid},#{talkid},#{userid})
+</insert>
+	</mapper>

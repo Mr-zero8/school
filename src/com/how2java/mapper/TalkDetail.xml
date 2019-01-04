@@ -14,4 +14,25 @@
 		<select id="gettalkid"     resultType="TalkDetail">
 			SELECT id AS talkid FROM talk_   WHERE id= ${talkid}
 		</select>
+		
+<!-- 		关键字搜索帖子 -->
+<!-- 		<select id="searchtalkdetail"     resultType="TalkDetail"> -->
+<!-- 			SELECT *FROM talkdetail_ WHERE authortext LIKE '%${keyword}%' -->
+<!-- 		</select> -->
+		
+<!-- 		关键字搜索帖子 Result Maps -->
+		<select id="searchtalkdetail"     resultMap="gettalkdetail">
+			SELECT *FROM talkdetail_ WHERE authortext LIKE '%${keyword}%'
+		</select>		
+		<resultMap id="gettalkdetail" type="TalkDetail">
+  			<id property="id" column="ID"/>
+  			<result property="authorname" column="Authorname"/>
+  			<result property="authortext" column="Authortext"/>
+  			<result property="writetime" column="Writetime"/>
+  			<result property="authorphoto" column="Authorphoto"/>
+  			<result property="img" column="Img"/>
+  			<result property="sort" column="Sort"/>
+  			<result property="talkid" column="Talkid"/>
+		</resultMap>
+		
 	</mapper>

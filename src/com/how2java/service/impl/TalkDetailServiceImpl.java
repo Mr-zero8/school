@@ -27,4 +27,10 @@ public class TalkDetailServiceImpl implements TalkDetailService {
 		return talkDetailMapper.gettalkid(talkid);
 	}
 
+	@Override
+	public List<TalkDetail> searchtalkdetail(String keyword) {
+		// TODO Auto-generated method stub
+		return talkDetailMapper.searchtalkdetail(keyword);
+	}
+
 }

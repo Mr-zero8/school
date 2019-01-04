@@ -14,12 +14,12 @@
 <style>
 .center {
 	width: 200px;
-	border: 1px solid11 #F00;
+	border: 1px solid1 #F00;
 	padding: 33px;
 }
 
 .div-height {
-	border: 1px solid11 #F00;
+	border: 1px solid1 #F00;
 	width: 300px;
 	height: 70px
 }
@@ -45,9 +45,9 @@
 <body>
 	<!-- 	整体页面框 -->
 	<div class="container"
-		style="margin-top: 20px; border: 1px solid11 red;">
+		style="margin-top: 20px; border: 1px solid1 red;">
 		<!-- 		<div class="row clearfix"> -->
-		<div class="col-md-12 column" style="border: 1px solid11 blue;">
+		<div class="col-md-12 column" style="border: 1px solid1 blue;">
 			<div class="row clearfix">
 				<!-- 				导航栏 -->
 				<div class="col-md-12 column">
@@ -62,7 +62,7 @@
 										class="icon-bar"></span><span class="icon-bar"></span><span
 										class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="searchlist">主页</a>
+								<a class="navbar-brand" href="index">主页</a>
 							</div>
 
 							<div class="collapse navbar-collapse"
@@ -114,20 +114,20 @@
 				<div class="col-md-2 column" style="width: 192px;">
 					<div class="row clearfix">
 						<img  src="${schoolbalogo}" width="192"
-							style="border: 1px solid11 #F00;" />
+							style="border: 1px solid1 #F00;" />
 					</div>
 				</div>
 				<div class="col-md-6 column pull-left"
-					style="border: 1px solid11 green; height: 194px;">
+					style="border: 1px solid1 green; height: 194px;">
 					<div class="row clearfix">
 						<div class="col-md-12 column"
-							style="border: 1px solid11 gray; padding: 9px;">
+							style="border: 1px solid1 gray; padding: 9px;">
 
 							<h2>${schoolbaname}</h2>
 						</div>
 					</div>
 					<div class="row clearfix">
-						<div class="col-md-12 column" style="border: 1px solid11 red;">
+						<div class="col-md-12 column" style="border: 1px solid1 red;">
 							<div class="row clearfix">
 								<span class="text pull-right">${schoolbalocation}</span>
 							</div>
@@ -135,7 +135,7 @@
 					</div>
 					<div class="row clearfix">
 						<div class="col-md-12 column center-block"
-							style="border: 1px solid11 blue; height: 50px;">
+							style="border: 1px solid1 blue; height: 50px;">
 							<div class="row clearfix">
 								<p class="text-muted">关注量：${schoolbaconcern}</p>
 								<p class="text-muted">讨论帖：${schoolbatalkcount}</p>
@@ -144,7 +144,7 @@
 					</div>
 					<div class="row clearfix">
 						<div class="col-md-12 column center-block"
-							style="border: 1px solid11 red; height: 37px;">
+							style="border: 1px solid1 red; height: 37px;">
 							<div class="row clearfix">
 								<button class="btn btn-info pull-left">关注</button>
 							</div>
@@ -154,7 +154,7 @@
 			</div>
 			<div class="row clearfix">
 				<div class="row clearfix">
-					<div class="col-md-12 column" style="border: 1px solid11 purple;">
+					<div class="col-md-12 column" style="border: 1px solid1 purple;">
 						<nav class="navbar navbar-default" role="navigation">
 							<ul class="wrap nav navbar-nav">
 								<li><a href="getSchoolba?id=${schoolbaid}">谈笑天地</a></li>
@@ -177,34 +177,34 @@
 
 
 		<div class="col-md-12 column"
-			style="margin-top: -19px; margin-bottom: 200px; margin-bottom: 15px; border: 1px solid11 red;">
+			style="margin-top: -19px; margin-bottom: 200px; margin-bottom: 15px; border: 1px solid1 red;">
 			<div class="row clearfix">
 				<div class="col-md-3 column " style="margin-right: 2px;border: 1px solid1 blue;width:283px;">
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;" src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;" src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
 			
 				</div>
 				<div class="col-md-3 column " style="margin-right: 2px;border: 1px solid1 blue;width:283px;">
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;" src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;" src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
 			
 				</div>
 				<div class="col-md-3 column " style="margin-right: 2px;border: 1px solid1 blue;width:283px;">
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;" src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;" src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
 			
 				</div>
 				<div class="col-md-3 column " style="margin-right: 2px;border: 1px solid1 blue;width:283px;">
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;" src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
-					<img class="row clearfix" style="border: 1px solid11 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;" src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
+					<img class="row clearfix" style="border: 1px solid1 red;width:281px;margin-bottom: 2px;"  src="${schoolbalogo}" />
 			
 				</div>
 			</div>

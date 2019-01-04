@@ -11,4 +11,6 @@ public interface TalkDetailMapper {
 	public List<TalkDetail> listdetail(@Param("id") Integer id, @Param("talkid") Integer talkid);
 
 	public TalkDetail gettalkid(@Param("talkid") Integer talkid);
+
+	public List<TalkDetail> searchtalkdetail(@Param("keyword") String keyword);
 }

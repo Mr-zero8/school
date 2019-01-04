@@ -6,7 +6,36 @@
 	<mapper namespace="com.how2java.mapper.UserMapper">
 	    
 		<select id="findUserByNameAndPwd"  parameterType="map"  resultType="User">
-			select username,password from user_  where username=#{name} and password=#{password}
+			select * from user_  where username=#{name} and password=#{password} 
 		</select>
+		
+		<select id="shifou"  parameterType="map"  resultType="int">
+			select count(*) from user_  where username=#{name} and password=#{password} 
+		</select>
+		
+<update id="gaireport" parameterType="int">
 
+update user_  set report=1  where id=#{id} 
+</update>
+
+<update id="addImage" >
+update user_ set image=#{0} where id=#{1}
+</update>
+
+<select id="byid" parameterType="int" resultType="User">
+select *from user_ where id=#{id}
+</select>
+<select id="findUserByUserName" parameterType="String" resultType="int">
+select count(*) from user_ where username=#{username}
+</select>
+<insert id="insertUser" parameterType="User">
+INSERT INTO user_ (username,password,email)VALUES(#{username},#{password},#{email})
+</insert>
+
+<select id="emailone" parameterType="String" resultType="int">
+select count(*) from user_ where email=#{email}
+</select>
+<select id="getuserid" parameterType="String" resultType="User">
+select * from user_ where username=#{username}
+</select>
 	</mapper>

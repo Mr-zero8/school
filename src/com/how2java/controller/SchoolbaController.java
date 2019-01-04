@@ -4,7 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.PageHelper;
@@ -19,6 +24,8 @@ import com.how2java.service.TalkService;
 import com.how2java.util.Page;
 
 @Controller
+//@SessionAttributes("Userid")
+
 @RequestMapping("")
 public class SchoolbaController {
 	@Autowired
@@ -30,23 +37,28 @@ public class SchoolbaController {
 	@Autowired
 	TalkDetailService talkDetailService;
 
+	// @ModelAttribute
+	// public void populateModel(@RequestParam("userid") int userid, Model
+	// model) {
+	// System.out.println("userid" + userid);
+	// model.addAttribute("userid", userid);
+	// }
+
 	@RequestMapping("getSchoolba")
-	public ModelAndView getSchoolba(Page page, Integer id) {
+	public ModelAndView getSchoolba(
+			 Page page, Integer id, ModelMap model) {
 		ModelAndView mav = new ModelAndView();
 
 		System.out.println(id);
 		Schoolba sb = schoolbaService.get(id);
 
-
 		PageHelper.offsetPage(page.getStart(), 5);
 
 		List<Talk> tl = talkService.list(id);
 
-
 		int total = (int) new PageInfo<>(tl).getTotal();
 
 		mav.addObject("tl", tl);
-
 
 		page.caculateLast(total);
 
@@ -57,6 +69,10 @@ public class SchoolbaController {
 		mav.addObject("schoolbalocation", sb.getLocation());
 		mav.addObject("schoolbalogo", sb.getSchoollogo());
 		mav.addObject("schoolbawebsite", sb.getWebsite());
+		mav.addObject("schoolbawebsite", sb.getWebsite());
+
+//		System.out.println("other controller de userid:" + getuserid);
+
 
 		mav.setViewName("getSchoolba");
 		return mav;
@@ -77,25 +93,26 @@ public class SchoolbaController {
 	// return mav;
 	// }
 
-	@RequestMapping("searchlist")
-	public ModelAndView searchlistCategory(String string) {
+	@RequestMapping("index")
+	public ModelAndView searchlistCategory(
+			 String string, ModelMap model) {
 
 		ModelAndView mav = new ModelAndView();
-		// PageHelper.offsetPage(page.getStart(), 5);
-		List<Schoolba> ss = schoolbaService.searchlist(string);
-		// int total = (int) new PageInfo<>(ss).getTotal();
-		//
-		// page.caculateLast(total);
 
-		// 放入转发参数
+		List<Schoolba> ss = schoolbaService.searchlist(string);
 		mav.addObject("ss", ss);
-		// 放入jsp路径
-		mav.setViewName("searchlist");
+		
+
+		
+//		System.out.println("other controller de userid:" + getuserid);
+
+
+		mav.setViewName("index");
 		return mav;
 	}
 
 	@RequestMapping("introduction")
-	public ModelAndView introduction(Integer id) {
+	public ModelAndView introduction(Integer id, ModelMap model) {
 		ModelAndView mav = new ModelAndView();
 
 		Schoolba sb = schoolbaService.get(id);
@@ -109,6 +126,20 @@ public class SchoolbaController {
 		mav.addObject("schoolbalogo", sb.getSchoollogo());
 		mav.addObject("schoolbawebsite", sb.getWebsite());
 		mav.addObject("schoolbaintroduction", sb.getIntroduction());
+
+		// System.out.println("other controller de userid:" + getuserid);
+
+		mav.setViewName("introduction");
+		return mav;
+	}
+	
+	@RequestMapping("updateschoolinfo")
+	public ModelAndView updateschoolinfo(String info) {
+		ModelAndView mav = new ModelAndView();
+		schoolbaService.updateinfo(info);
+
+
+		// System.out.println("other controller de userid:" + getuserid);
 
 		mav.setViewName("introduction");
 		return mav;
