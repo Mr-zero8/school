@@ -28,6 +28,11 @@ select *from user_ where id=#{id}
 <select id="findUserByUserName" parameterType="String" resultType="int">
 select count(*) from user_ where username=#{username}
 </select>
+
+<select id="ByUserName" parameterType="String" resultType="User">
+select * from user_ where username=#{username}
+</select>
+
 <insert id="insertUser" parameterType="User">
 INSERT INTO user_ (username,password,email)VALUES(#{username},#{password},#{email})
 </insert>
@@ -35,4 +40,13 @@ INSERT INTO user_ (username,password,email)VALUES(#{username},#{password},#{emai
 <select id="emailone" parameterType="String" resultType="int">
 select count(*) from user_ where email=#{email}
 </select>
+
+<select id="getuserid" parameterType="String" resultType="User">
+select * from user_ where username=#{username}
+</select>
+
+<update id="renzheng">
+update user_ set renzhenged=#{0} where id=#{1}
+</update>
+
 	</mapper>

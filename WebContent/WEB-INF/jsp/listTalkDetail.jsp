@@ -1,0 +1,511 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>schoolba</title>
+<link
+	href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+<script
+	src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.center {
+	width: 200px;
+	border: 1px solid11 #F00;
+	padding: 33px;
+}
+//收藏按钮
+div.page {
+    width: 800px;
+    height: 842px;
+    margin: 50px auto;
+    font-family:SimHei;
+     background:#FFFFFF;
+}
+
+div.top, div.footer {
+    background-color: #2BA4DD;
+}
+
+div.top {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+div.footer {
+    height: 15px;
+    margin-top: 30px;
+}
+
+
+div.tools{
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    text-align: center;
+}
+
+div.tools input{
+    padding: 8px;
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+div.tools input:hover{
+    background-color: orange;
+}
+
+div.tools input:active{
+    background-color: #FF8800;
+}
+
+
+div.tools button{
+    padding: 8px;
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+div.tools button:hover{
+    background-color: orange;
+}
+
+div.tools button:active{
+    background-color: #FF8800;
+}
+
+
+div.tijiao{
+    position: fixed;
+    top: 16px;
+    right:16px;
+    bottom: 16px;
+    text-align: center;
+}
+
+div.tijiao input{
+    padding: 8px;
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+div.tijiao input:hover{
+    background-color: orange;
+}
+
+div.tijiao input:active{
+    background-color: #FF8800;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+li.topContact {
+    display: inline-block;
+    padding: 0px 70px;
+}
+
+div.header {
+    height: 130px;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+div.name {
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+}
+
+div.job {
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+div.content {
+    
+}
+
+/* Panel 是简历信息具体的内容面板，即可伸缩面板 */
+.panel {
+    margin-top: 20px;
+    padding: 0px 0px 20px 0px;
+}
+
+.panelTitle {
+    height: 35px;
+    width: 100%;
+    border-bottom: 2px solid #2BA4DD;
+}
+
+div.colorBlock, div.title {
+    float: left;
+}
+
+div.scrollBtn {
+    float: right;
+}
+
+/* 伸缩面板的伸缩按钮 */
+span.scroIcon {
+    height:20px; width:40px; display:block; position:relative;
+    cursor: pointer;
+} 
+
+.scroIcon:before{
+    content:''; height:0; width:0; display:block; border:15px transparent double; 
+    border-bottom-width:0; border-top-color:#2BA4DD; position:absolute; 
+    top:0px; left:0px; }
+
+.colorBlock {
+    height: 100%;
+    width: 25px;
+    margin-right: 15px;
+    background-color: #2BA4DD;
+}
+
+.title {
+    width: 400px;
+    height: 100%;
+    line-height: 35px;
+    font-size: 24px;
+}
+
+/* 简历项 */
+li.resumeItem {
+    padding: 5px 0px;
+}
+
+li.resumeItem span, input {
+    display: inline-block;
+}
+
+li.resumeItem span {
+    width: 150px;
+}
+
+li.resumeItem select {
+    width: 100px;
+}
+
+.clear {
+    clear:both;
+}
+
+
+.div-height {
+	border: 1px solid11 #F00;
+	width: 300px;
+	height: 70px
+}
+</style>
+
+<script type="text/javascript">
+	function getJumpUrl() {
+		window.open("${schoolbawebsite}")//跳转路径
+	}
+</script>
+
+<script type="text/javascript">
+$(function(){
+    $(".wrap li").click(function() {
+        $(this).siblings('li').removeClass('active');  // 删除其兄弟元素的样式
+        $(this).addClass('active');                    // 为点击元素添加类名
+    });
+}); 
+
+
+</script>
+</head>
+<%
+    
+    
+    String mess=(String)session.getAttribute("msg1");
+    if(mess==null){
+         
+    }
+ 
+ else{%>
+    <script type="text/javascript">
+        alert("<%=mess%>");
+</script>
+ <%session.setAttribute("msg1",null); %>
+    
+<% }%>
+<body>
+ 						<div class="tijiao">
+							<form name="shouchang" id="shouchang" action="shouchangING" method="get">  
+							  
+							<input type="hidden" name="schoolid" id="schoolid" value= "${schoolbaid}">
+							<input type="hidden" name="userid" id="userid" value="${userid}"/>  
+							  <input type="hidden" name="talkid" id="talkid" value="${talkid}"/>
+							</form>
+     						<button onclick="document.getElementById('shouchang').submit();">收藏该帖</button>
+    					</div>
+	<div class="container" style="margin-top:20px;border:1px solid11 red;">
+<!-- 		<div class="row clearfix"> -->
+			<div class="col-md-12 column" style="border:1px solid11 blue;">
+				<div class="row clearfix">
+					<div class="col-md-12 column">
+					  <div class="row clearfix">
+						<nav class="navbar navbar-default navbar-inverse"
+							role="navigation">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle"
+									data-toggle="collapse"
+									data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span><span
+										class="icon-bar"></span><span class="icon-bar"></span><span
+										class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="searchlist">主页</a>
+							</div>
+
+							<div class="collapse navbar-collapse"
+								id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="#">最近热门</a></li>
+									<li><a href="#">我的收藏</a></li>
+									<li class="dropdown"><a href="#" class="dropdown-toggle"
+										data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+											<li class="divider"></li>
+											<li><a href="#">One more separated link</a></li>
+										</ul></li>
+								</ul>
+								<!-- //传值 -->
+									<form class="navbar-form navbar-right" role="search" action="searchlist" >
+									<div class="form-group">
+									<input type="text" class="form-control" id="string"/>
+									<input type="hidden"  id="userid" name="userid" value="${userid}">
+									</div> <button type="submit" class="btn btn-default">搜索</button>
+									<button type="submit" class="btn btn-default">自动匹配</button>
+									</form>
+								<ul class="nav navbar-nav navbar-left">
+									<li><a href="#">成绩录入</a></li>
+									<li><a href="personal?id=${user.id}">个人中心</a></li>
+									<li class="dropdown"><a href="#" class="dropdown-toggle"
+										data-toggle="dropdown">更多<strong class="caret"></strong></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul></li>
+								</ul>
+							</div>
+
+						</nav>
+						</div>
+					</div>
+				</div>
+				<div class="row clearfix" style="background-color: #F4F6F9;">
+					<div class="col-md-2 column"style="width:192px;">
+						<div class="row clearfix">
+						<img  src="${schoolbalogo}" width="192" style="border: 1px solid11 #F00;" />
+						</div>
+					</div>
+					<div class="col-md-6 column pull-left" style="border: 1px solid11 green;height:194px;">
+						<div class="row clearfix">
+							<div class="col-md-12 column" style="border: 1px solid11 gray;padding: 9px;" >
+								
+								<h2>${schoolbaname}</h2>
+							</div>
+						</div>
+						<div class="row clearfix">
+							<div class="col-md-12 column" style="border: 1px solid11 red;">
+								<div class="row clearfix">
+								<span class="text pull-right">${schoolbalocation}</span>
+								</div>
+							</div>
+						</div>
+						<div class="row clearfix">
+							<div class="col-md-12 column center-block" style="border: 1px solid11 blue;height:50px;">
+								<div class="row clearfix">
+								<p class="text-muted">关注量：${schoolbaconcern}</p>
+								<p class="text-muted">讨论帖：${schoolbatalkcount}</p>
+								</div>
+							</div>
+						</div>
+						<div class="row clearfix">
+							<div class="col-md-12 column center-block" style="border: 1px solid11 red;height:37px;">
+								<div class="row clearfix">
+								<button class="btn btn-info pull-left">关注</button>
+								</div>
+							</div>
+						</div>
+					</div>
+<!-- 					<div class="col-md-3 column" style="border: 1px solid11 blue;height:193px;width:378px;"> -->
+						
+<!-- 					</div> -->
+				</div>
+				<div class="row clearfix">
+				<div class="row clearfix">
+					<div class="col-md-12 column" style="border:1px solid11 purple;">
+						<nav class="navbar navbar-default" role="navigation">
+							<ul class="wrap nav navbar-nav">
+								<li class="active"><a
+									href="getSchoolba?id=${schoolbaid}">谈笑天地</a></li>
+								<li><a href="introduction?id=${schoolbaid}">校园简介</a></li>
+								<li><a href="picture?id=${schoolbaid}">校园风景</a></li>
+								<li><a href="policy?id=${schoolbaid}">招生政策</a></li>
+								<li><a a href="javascript:void(0);" onclick="getJumpUrl();return false;">校园官网</a></li>
+							</ul>
+<!-- 							<ul class="nav navbar-nav navbar-right"> -->
+<!-- 							</ul> -->
+						</nav>
+					</div>
+
+				</div>	
+				</div>
+
+			</div>
+
+			<div class="col-md-12 column " style="border:1px solid11 green;margin-top: 0px;padding:0px;">
+			   <c:forEach items="${td}" var="t" varStatus="st">
+				
+
+				<c:choose>	
+					 
+				<c:when test="${t.sort%1==0}">	
+				<div  class="col-md-12 column " style="background-color:#E0EEEE;border:1px solid11 red;margin-bottom: 40px;padding:27px;">
+						<div class="col-md-2 column" style="border:1px solid11 red;width:124px;">
+							<div style="border:1px solid11 blue;">
+								<img  width="90px" src="${t.authorphoto}" />
+							</div>
+							<div class="text-center" style="border:1px solid11 red;">
+								<a href="#" class=text-justify style="color:black;">${t.authorname}</a>
+							</div> 
+						</div>
+						 <div style="border:1px solid11 blue;"class="text-center">
+						   <img  width="50px" src="${t.img }" />
+						 </div>
+						<div class="col-md-8 column" style="border:1px solid11 green;margin-left:20px;">
+							<h4>${t.authortext}</h4>
+							
+							<a href="#" class="pull-right" 
+								style="font-size: 15px;">回复</a>
+							<p class="text-muted pull-right">${t.writetime}</p>
+						</div>
+						<div class="col-md-2 column text-center" style="border:1px solid11 red;padding:10px;margin-left:20px;">
+							<h1>#${t.sort}</h1>
+						</div>	
+					</div>							
+				</c:when>
+				<c:otherwise>
+				<div  class="col-md-12" style="border:1px solid11 blue;margin-bottom: 40px;margin-top: -30px;">
+					<div class="col-md-9  pull-right row clearfix" style="margin-bottom: 0px;background-color:#E8E8E8;border:1px solid11 blue;padding:18px;">
+						<div class="col-md-2 column" style="border:1px solid11 red;width:150px;">
+							<div style="border:1px solid11 blue;"class="text-center">
+								<img  width="50px" src="${t.authorphoto}" />
+							</div>
+							<div class="text-center" style="border:1px solid11 red;">
+								<a href="#" class=text-justify style="color:black;">${t.authorname}</a>
+							</div> 
+						</div>
+						
+						<div class="col-md-9 column" style="width:510px;border:1px solid11 green;margin-right:00px;">
+						 <div style="border:1px solid11 blue;"class="text-center">
+						   <img  width="50px" src="${t.img }" />
+						 </div>
+						
+							<h4>${t.authortext}</h4>
+							
+							<a href="#" class="pull-right"
+								style="font-size: 15px;">回复</a>
+							<p class="text-muted pull-right">${t.writetime}</p>
+						</div>
+						<div class="col-md-1 column text-center" style="border:1px solid11 red;padding:10px;margin-left:20px;">
+							<h4>#${t.sort}</h4>
+						</div>
+					</div>	
+					</div>			
+				</c:otherwise>
+				
+				</c:choose>
+				
+				
+				
+			   </c:forEach>
+			</div>
+			
+			<div class="col-md-12 column" style="border:1px solid11 red;margin-bottom: 10px;">
+				<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="row clearfix">
+					<ul class="pagination pull-left">
+						<li><a href="?start=0&id=${schoolbaid}&talkid=${talkid}" style="color: black;">首页</a></li>
+						<li><a style="color: black;"
+							<c:if test="${page.start-page.count>=0}"> href="?start=${page.start-page.count}&id=${schoolbaid}&talkid=${schoolbaid}"</c:if>>&laquo;</a></li>
+						<li <c:if test="${page.start/5+1==1}">class="active"</c:if>><a
+							style="color: black;" href="?start=0&id=${schoolbaid}&talkid=${talkid}">1</a></li>
+						<li <c:if test="${page.start/5+1==2}">class="active"</c:if>><a
+							style="color: black;" href="?start=5&id=${schoolbaid}&talkid=${talkid}">2</a></li>
+						<li <c:if test="${page.start/5+1==3}">class="active"</c:if>><a
+							style="color: black;" href="?start=10&id=${schoolbaid}&talkid=${talkid}">3</a></li>
+<%-- 												<li <c:if test="${page.start/5+1==4}">class="active"</c:if>><a href="?start=15">4</a></li> --%>
+<%-- 												<li <c:if test="${page.start/5+1==5}">class="active"</c:if>><a href="?start=${page.start=4*5}">5</a></li> --%>
+						<li><a style="color: black;"
+							<c:if test="${page.start-page.count!=page.last-5}"> href="?start=${page.start+page.count}&id=${schoolbaid}&talkid=${talkid}"</c:if>>&raquo;</a></li>
+						<li><a style="color: black;" href="?start=${page.last}&id=${schoolbaid}&talkid=${talkid}">尾页</a></li>
+					</ul>
+					</div>
+				</div>
+				</div>
+			</div>
+     <form action="TalkDetail" method="post" enctype="multipart/form-data">
+			<div class="col-md-12 column"
+				style="margin-top: 10px;margin-bottom:200px; background-color: #F4F6F9;border:1px solid11 red;">
+				<div class="col-md-8 column" style="border:1px solid11 red;">
+				<p style="margin-top: 18px;">
+					<span class="glyphicon glyphicon-pencil"></span> 选择图片
+				</p>
+				</div>
+				<div class="col-md-8 column"
+					style="margin-bottom: 25px; margin-top: 15px;border:1px solid11 blue;">
+					<input type="file" class="form-control" 
+						style="height: 40px; font-size: 22px;" name="fileimg" id="fileimg">
+						<%-- <input type="hidden" name="userid" value="${userid}"> --%>
+						<input type="hidden" name="talkid" value="${talkid}">
+						<input type="hidden" name="schoolid" value="${schoolbaid}">
+						
+				</div>
+				<div class="col-md-8 column" style="margin-bottom: 15px;border:1px solid11 red;">
+					<textarea rows="9" cols="114" placeholder="此处填写内容" name="say"
+						style="resize: none; width: 100%;"></textarea>
+				</div>
+				<div class="col-md-8 column" style="margin-bottom: 15px;border:1px solid11 red;">
+					<button type="submit" class="btn btn-primary pull-right">发表</button>
+				</div>
+			</div>
+			</form>
+<!-- 		</div> -->
+	</div>
+
+</body>
+</html>

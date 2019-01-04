@@ -24,4 +24,10 @@ public interface UserMapper {
 	public void insertUser(User a);
 	//验证唯一邮箱
 	public int emailone(String a);
+	
+	public User getuserid(String username);
+	
+	public void renzheng(int schoolid,int userid);
+	//通过用户名找用户信息
+	public User ByUserName(String a);
 }

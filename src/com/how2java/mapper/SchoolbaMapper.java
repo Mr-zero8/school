@@ -17,4 +17,6 @@ public interface SchoolbaMapper {
 	public List<Schoolba> searchlist(@Param("string") String string);
 
 	// public List<TalkDetail> listtalkdetail();
+	
+	public Schoolba selectidByname(String name);
 }

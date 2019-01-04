@@ -10,6 +10,7 @@ public class User {
     private int studentid;
     private String email;
     private String image;
+    private int renzhenged;
 	public int getId() {
 		return id;
 	}
@@ -84,6 +85,14 @@ public class User {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public int getRenzhenged() {
+		return renzhenged;
+	}
+
+	public void setRenzhenged(int renzhenged) {
+		this.renzhenged = renzhenged;
 	}
 
 	@Override

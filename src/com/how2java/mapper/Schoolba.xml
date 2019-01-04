@@ -18,6 +18,9 @@
 			SELECT *  FROM schoolba0 where name like '%${string}%'
 		</select>
 
+<select id="selectidByname" resultType="Schoolba">
+select * from schoolba0 where name like #{0}
+</select>
 
 <!-- 		<select id="list"    resultType="Talk"> -->
 <!-- 			SELECT *FROM talk_ where schoolid = ${id} -->

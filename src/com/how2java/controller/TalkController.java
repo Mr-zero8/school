@@ -9,6 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.how2java.pojo.TalkDetail;
@@ -17,6 +18,7 @@ import com.how2java.service.TalkDetailService;
 import com.how2java.service.UserService;
 
 @Controller
+@SessionAttributes("Userid")
 @RequestMapping
 public class TalkController {
 	@Autowired
@@ -34,11 +36,6 @@ public class TalkController {
 		return mav;
 	}
 
-    @ModelAttribute 
-    public void populateModel(@RequestParam("userid") int userid, Model model) { 
-  	  System.out.println("userid"+userid);
-         model.addAttribute("userid", userid); 
-      }
 	
 /*	@RequestMapping("getTalk")
 	public ModelAndView getTalk(Integer id) {

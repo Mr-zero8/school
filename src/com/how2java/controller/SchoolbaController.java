@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.PageHelper;
@@ -26,6 +27,7 @@ import com.how2java.service.impl.MessageServiceImpI;
 import com.how2java.util.Page;
 
 @Controller
+@SessionAttributes("Userid")
 @RequestMapping("")
 public class SchoolbaController {
 	@Autowired
@@ -38,11 +40,6 @@ public class SchoolbaController {
 	MessageService mess;
 	
 	
-	      @ModelAttribute 
-	      public void populateModel(@RequestParam("userid") int userid, Model model) { 
-	    	  System.out.println("userid"+userid);
-	           model.addAttribute("userid", userid); 
-	        } 
 	
 	@RequestMapping("getSchoolba")
 	public ModelAndView getSchoolba(Page page, @RequestParam("id") Integer id,HttpServletRequest request) {
@@ -89,7 +86,7 @@ public class SchoolbaController {
 //	}
 	
 	@RequestMapping("searchlist")
-	public ModelAndView searchlistCategory(String string,@RequestParam int userid) {
+	public ModelAndView searchlistCategory(String string,@ModelAttribute("Userid") int userid) {
 
 		ModelAndView mav = new ModelAndView();
 		// PageHelper.offsetPage(page.getStart(), 5);

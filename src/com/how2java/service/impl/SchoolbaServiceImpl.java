@@ -38,6 +38,13 @@ public class SchoolbaServiceImpl implements SchoolbaService {
 		return schoolbaMapper.searchlist(string);
 	}
 
+	@Override
+	public Schoolba selectidByname(String name) {
+		// TODO Auto-generated method stub
+		return schoolbaMapper.selectidByname(name)
+				;
+	}
+
 //	@Override
 //	public List<TalkDetail> listtalkdetail() {
 //		// TODO Auto-generated method stub

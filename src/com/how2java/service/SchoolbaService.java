@@ -16,4 +16,5 @@ public interface SchoolbaService {
 
 	List<Schoolba> searchlist(String string);
 	// List<TalkDetail> listtalkdetail();
+	public Schoolba selectidByname(String name);
 }

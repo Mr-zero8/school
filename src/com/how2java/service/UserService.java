@@ -20,4 +20,11 @@ public interface UserService {
 	public void insertUser(User a);
 	
 	public int emailone(String a);
+	
+	User getuserid(String username);
+	
+	public void renzheng(int schoolid,int userid);
+	
+	//通过用户名找用户信息
+	public User ByUserName(String a);
 }

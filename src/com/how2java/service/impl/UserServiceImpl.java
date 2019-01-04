@@ -61,6 +61,23 @@ public class UserServiceImpl implements UserService {
 		return userMapper.emailone(a);
 	}
 
+	@Override
+	public User getuserid(String username) {
+		return userMapper.getuserid(username);
+	}
+
+	@Override
+	public void renzheng(int schoolid, int userid) {
+		
+		userMapper.renzheng(schoolid, userid);
+	}
+
+	@Override
+	public User ByUserName(String a) {
+		
+		return userMapper.ByUserName(a);
+	}
+
 
 
 }
